@@ -130,11 +130,11 @@ const StickyPurchaseBar = ({ isVisible }) => {
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
-          className="fixed bottom-0 left-0 right-0 z-[100] bg-white/90 backdrop-blur-xl border-t border-purple-100 p-4 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] md:p-6"
+          className="fixed bottom-0 left-0 right-0 z-[100] bg-white/90 backdrop-blur-xl border-t border-purple-100 p-3 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] md:p-4"
         >
-          <div className="container-custom max-w-6xl flex items-center justify-between gap-4">
-            <div className="hidden md:flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl overflow-hidden shadow-md">
+          <div className="container-custom max-w-6xl flex items-center justify-between gap-3 md:gap-4">
+            <div className="hidden md:flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md">
                 <img
                   src="/products/party.png"
                   alt="Product"
@@ -162,7 +162,9 @@ const StickyPurchaseBar = ({ isVisible }) => {
                 <p className="text-[10px] text-gray-400 font-black uppercase tracking-tighter line-through">
                   ₹4,999
                 </p>
-                <p className="text-2xl font-black gradient-text-gold">₹1,999</p>
+                <p className="text-xl md:text-2xl font-black gradient-text-gold">
+                  ₹1,999
+                </p>
               </div>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -173,7 +175,7 @@ const StickyPurchaseBar = ({ isVisible }) => {
                     "_blank",
                   )
                 }
-                className="bg-gradient-to-r from-purple-600 to-purple-800 text-white font-black px-8 py-4 rounded-2xl shadow-xl shadow-purple-100 flex items-center gap-2 whitespace-nowrap text-sm md:text-base"
+                className="bg-gradient-to-r from-purple-600 to-purple-800 text-white font-black px-6 md:px-7 py-3 md:py-3.5 rounded-2xl shadow-xl shadow-purple-100 flex items-center gap-2 whitespace-nowrap text-sm md:text-base"
               >
                 SECURE ACCESS <ArrowRight size={18} />
               </motion.button>
@@ -966,7 +968,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
       {/* HERO SECTION */}
       <section
         ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-4 pt-32 pb-20 overflow-hidden bg-gradient-to-b from-purple-100/40 via-brand-plum/20 to-amber-50/30"
+        className="relative min-h-screen flex items-center justify-center px-4 pt-24 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-gradient-to-b from-purple-100/40 via-brand-plum/20 to-amber-50/30"
       >
         {/* subtle top light to keep logo visible */}
         <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-white/30 to-transparent pointer-events-none z-0" />
@@ -977,7 +979,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
         <img
           src="/images/ria-party.jpg"
           alt="Ria Gupta - Party"
-          className="absolute right-8 lg:right-20 top-40 lg:top-56 w-80 md:w-72 lg:w-80 h-auto rounded-2xl object-cover shadow-lg hidden md:block pointer-events-none z-0"
+          className="absolute right-6 lg:right-16 top-36 lg:top-48 w-72 md:w-64 lg:w-72 h-auto rounded-2xl object-cover shadow-lg hidden md:block pointer-events-none z-0 md:translate-x-4 lg:translate-x-8"
         />
         <div className="container-custom max-w-5xl text-center relative z-10">
           <motion.div
@@ -995,7 +997,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-6xl md:text-8xl lg:text-9xl font-serif font-bold leading-[1] mb-10 tracking-tight"
+            className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold leading-[0.95] mb-8 md:mb-10 tracking-tight"
           >
             Rewire While <br />
             <span className="gradient-text-gold italic">You Party.</span>
@@ -1005,7 +1007,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-900 font-semibold mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-900 font-semibold mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed"
           >
             Bypass your conscious resistance with the Party Mixtape. No effort.
             No rituals. Just press play, dance, and amplify your magnetism.

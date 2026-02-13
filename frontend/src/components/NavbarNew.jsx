@@ -54,14 +54,14 @@ const Navbar = () => {
             : "bg-transparent"
         }`}
       >
-        <div className="container-custom">
-          <div className="flex items-center justify-between h-20 md:h-24">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
               <img
                 src="/images/wishtune-logo.png"
                 alt="Wishtune Logo"
-                className="h-12 w-auto object-contain"
+                className="h-9 md:h-10 w-auto object-contain"
               />
             </Link>
 
@@ -73,7 +73,7 @@ const Navbar = () => {
               {/* Free Gift CTA - Desktop */}
               <Link
                 to="/free-gift"
-                className="hidden md:flex items-center gap-2 bg-gradient-to-r from-brand-gold to-brand-gold-dark text-brand-dark font-bold px-6 py-3 rounded-full hover:shadow-glow transition-all hover:scale-105"
+                className="hidden md:flex items-center gap-2 bg-gradient-to-r from-brand-gold to-brand-gold-dark text-brand-dark font-bold px-5 py-2.5 rounded-full hover:shadow-glow transition-all hover:scale-105"
               >
                 <Sparkles className="w-4 h-4" />
                 <span className="text-sm">Free Gift</span>
@@ -82,7 +82,7 @@ const Navbar = () => {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="lg:hidden p-3 rounded-xl bg-white border border-gray-200 transition-all"
+                className="lg:hidden p-2.5 rounded-xl bg-white border border-gray-200 transition-all"
               >
                 {isOpen ? (
                   <X className="w-6 h-6 text-gray-700" />
