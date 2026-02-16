@@ -956,7 +956,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 text-[98%] md:text-[96%] lg:text-[94%]">
+    <div className="min-h-screen bg-white text-gray-900 text-[92%] md:text-[90%] lg:text-[90%]">
       <StickyPurchaseBar isVisible={showStickyBar} />
       <AudioPreview />
       <PurchaseNotification />
@@ -999,7 +999,9 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-8 md:mb-10 tracking-tight"
           >
-            Become The <span className="gradient-text-gold">Most Magnetic Person</span> In The Room.
+            Become The{" "}
+            <span className="gradient-text-gold">Most Magnetic Person</span> In
+            The Room.
           </motion.h1>
 
           <motion.p
