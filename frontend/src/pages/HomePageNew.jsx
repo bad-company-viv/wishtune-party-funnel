@@ -956,7 +956,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 text-[96%] md:text-[94%] lg:text-[93%]">
+    <div className="min-h-screen bg-white text-gray-900 text-[98%] md:text-[96%] lg:text-[94%]">
       <StickyPurchaseBar isVisible={showStickyBar} />
       <AudioPreview />
       <PurchaseNotification />
@@ -968,7 +968,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
       {/* HERO SECTION */}
       <section
         ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center pl-4 pr-2 md:pr-4 pt-24 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-gradient-to-b from-purple-100/40 via-brand-plum/20 to-amber-50/30"
+        className="relative min-h-screen flex items-center justify-center px-2 md:px-4 pt-24 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-gradient-to-b from-purple-100/40 via-brand-plum/20 to-amber-50/30"
       >
         {/* subtle top light to keep logo visible */}
         <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-white/30 to-transparent pointer-events-none z-0" />
@@ -979,9 +979,9 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
         <img
           src="/images/ria-party.jpg"
           alt="Ria Gupta - Party"
-          className="absolute right-2 lg:right-8 top-1/2 -translate-y-1/2 w-56 md:w-60 lg:w-64 max-h-[70vh] h-auto rounded-2xl object-contain shadow-xl hidden md:block pointer-events-none z-0"
+          className="absolute right-4 lg:right-12 top-1/2 -translate-y-1/2 w-56 md:w-60 lg:w-64 max-h-[70vh] h-auto rounded-2xl object-contain shadow-xl hidden md:block pointer-events-none z-0"
         />
-        <div className="container-custom max-w-5xl text-center relative z-10">
+        <div className="container-custom max-w-4xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -997,13 +997,9 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold leading-[0.95] mb-8 md:mb-10 tracking-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-8 md:mb-10 tracking-tight"
           >
-            Become The <br />
-            <span className="gradient-text-gold italic">
-              Most Magnetic Person
-            </span>
-            <br /> In The Room.
+            Become The <span className="gradient-text-gold">Most Magnetic Person</span> In The Room.
           </motion.h1>
 
           <motion.p
