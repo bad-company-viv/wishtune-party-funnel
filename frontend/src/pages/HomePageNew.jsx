@@ -956,7 +956,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-white text-gray-900 text-[96%]">
       <StickyPurchaseBar isVisible={showStickyBar} />
       <AudioPreview />
       <PurchaseNotification />
@@ -979,7 +979,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
         <img
           src="/images/ria-party.jpg"
           alt="Ria Gupta - Party"
-          className="absolute right-6 lg:right-16 top-36 lg:top-48 w-72 md:w-64 lg:w-72 h-auto rounded-2xl object-cover shadow-lg hidden md:block pointer-events-none z-0 md:translate-x-4 lg:translate-x-8"
+          className="absolute right-6 lg:right-16 top-1/2 -translate-y-1/2 w-72 md:w-64 lg:w-72 h-auto rounded-2xl object-cover shadow-lg hidden md:block pointer-events-none z-0 md:translate-x-4 lg:translate-x-8"
         />
         <div className="container-custom max-w-5xl text-center relative z-10">
           <motion.div
@@ -999,8 +999,11 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold leading-[0.95] mb-8 md:mb-10 tracking-tight"
           >
-            Rewire While <br />
-            <span className="gradient-text-gold italic">You Party.</span>
+            Become The <br />
+            <span className="gradient-text-gold italic">
+              Most Magnetic Person
+            </span>
+            <br /> In The Room.
           </motion.h1>
 
           <motion.p
@@ -1009,8 +1012,11 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl text-gray-900 font-semibold mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Bypass your conscious resistance with the Party Mixtape. No effort.
-            No rituals. Just press play, dance, and amplify your magnetism.
+            The Party Mixtape is a 45-minute high-energy, 432Hz engineered
+            experience designed to amplify your confidence, charisma, and social
+            magnetism in real time.
+            <br />
+            Just press play before you step out — and let the energy work.
           </motion.p>
 
           <motion.div
@@ -1324,7 +1330,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
             </span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-500 mb-16 max-w-2xl mx-auto font-light">
-            Join 1,607+ people transforming their lives. Stop trying and start
+            Join 10,000+ people transforming their lives. Stop trying and start
             shifting today.
           </p>
           <button
