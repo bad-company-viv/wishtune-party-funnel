@@ -968,7 +968,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
       {/* HERO SECTION */}
       <section
         ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-2 md:px-4 pt-24 md:pt-28 pb-16 md:pb-20 overflow-hidden bg-gradient-to-b from-purple-100/40 via-brand-plum/20 to-amber-50/30"
+        className="relative min-h-screen flex items-center justify-center px-2 md:px-4 pt-20 md:pt-24 pb-16 md:pb-20 overflow-hidden bg-gradient-to-b from-purple-100/40 via-brand-plum/20 to-amber-50/30"
       >
         {/* subtle top light to keep logo visible */}
         <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-white/30 to-transparent pointer-events-none z-0" />
@@ -979,7 +979,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
         <img
           src="/images/ria-party.jpg"
           alt="Ria Gupta - Party"
-          className="absolute right-4 lg:right-12 top-1/2 -translate-y-1/2 w-56 md:w-60 lg:w-64 max-h-[70vh] h-auto rounded-2xl object-contain shadow-xl hidden md:block pointer-events-none z-0"
+          className="absolute right-0 lg:right-2 top-1/2 -translate-y-1/2 w-56 md:w-60 lg:w-64 max-h-[70vh] h-auto rounded-2xl object-contain shadow-xl hidden md:block pointer-events-none z-0"
         />
         <div className="container-custom max-w-4xl mx-auto text-center relative z-10">
           <motion.div
@@ -993,22 +993,25 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
             </span>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-8 md:mb-10 tracking-tight"
-          >
-            Become The{" "}
-            <span className="gradient-text-gold">Most Magnetic Person</span> In
-            The Room.
-          </motion.h1>
+        <motion.h1
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-6 tracking-tight"
+>
+  Become the <br />
+  <span className="bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent drop-shadow-[0_2px_6px_rgba(0,0,0,0.15)]">
+    Most Magnetic Person
+  </span>
+  <br />
+  in the room
+</motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-900 font-semibold mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-base md:text-lg text-gray-900 font-semibold mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed"
           >
             The Party Mixtape is a 45-minute high-energy, 432Hz engineered
             experience designed to amplify your confidence, charisma, and social
