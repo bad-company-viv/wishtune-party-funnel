@@ -96,7 +96,7 @@ const LandingPage = () => {
       price: 1999,
       formattedPrice: "₹1,999",
       path: "/shop/party",
-      img: "/products/party.png",
+      img: "/party-mixtape.png",
       badge: "BESTSELLER",
     },
     {

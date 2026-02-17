@@ -204,7 +204,7 @@ const HomePage = () => {
                 price: 1999,
                 formattedPrice: "₹1,999",
                 path: "/shop/party",
-                img: "/products/party.png",
+                img: "/party-mixtape.png",
                 color: "bg-[#4A1D5A]",
               }, // Purple
               {

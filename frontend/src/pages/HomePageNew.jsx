@@ -130,41 +130,27 @@ const StickyPurchaseBar = ({ isVisible }) => {
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
-          className="fixed bottom-0 left-0 right-0 z-[100] bg-white/90 backdrop-blur-xl border-t border-purple-100 p-3 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] md:p-4"
+          className="fixed bottom-0 left-0 right-0 z-[100] bg-white/95 backdrop-blur-xl border-t border-purple-100 shadow-[0_-10px_40px_rgba(0,0,0,0.05)]"
         >
-          <div className="container-custom max-w-6xl flex items-center justify-between gap-3 md:gap-4">
-            <div className="hidden md:flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md">
-                <img
-                  src="/products/party.png"
-                  alt="Product"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <p className="font-bold text-gray-900 leading-tight">
-                  The Party Mixtape
-                </p>
-                <p className="text-xs gradient-text-gold font-bold uppercase tracking-widest">
-                  Flagship Offer
-                </p>
-              </div>
-            </div>
-
-            <div className="flex-1 md:flex-none flex items-center justify-between md:justify-end gap-6 md:gap-10">
-              <div className="hidden sm:block">
-                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-1 text-center md:text-right">
-                  OFFER ENDS IN
-                </p>
-                <SharedCountdown />
-              </div>
-              <div className="text-left md:text-right">
-                <p className="text-[10px] text-gray-400 font-black uppercase tracking-tighter line-through">
-                  ₹4,999
-                </p>
-                <p className="text-xl md:text-2xl font-black gradient-text-gold">
-                  ₹1,999
-                </p>
+          <div className="container-custom max-w-6xl px-3 py-2 md:px-4 md:py-2.5">
+            {/* Mobile Layout */}
+            <div className="flex md:hidden items-center justify-between gap-2">
+              <div className="flex items-center gap-2 min-w-0">
+                <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md shrink-0">
+                  <img
+                    src="/party-mixtape.png"
+                    alt="Product"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <p className="font-bold text-gray-900 leading-tight text-xs truncate">
+                    Party Mixtape
+                  </p>
+                  <p className="text-lg font-black gradient-text-gold leading-none">
+                    ₹1,999
+                  </p>
+                </div>
               </div>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -175,10 +161,61 @@ const StickyPurchaseBar = ({ isVisible }) => {
                     "_blank",
                   )
                 }
-                className="bg-gradient-to-r from-purple-600 to-purple-800 text-white font-black px-6 md:px-7 py-3 md:py-3.5 rounded-2xl shadow-xl shadow-purple-100 flex items-center gap-2 whitespace-nowrap text-sm md:text-base"
+                className="bg-gradient-to-r from-purple-600 to-purple-800 text-white font-black px-4 py-2.5 rounded-xl shadow-xl shadow-purple-100 flex items-center gap-1.5 whitespace-nowrap text-xs shrink-0"
               >
-                SECURE ACCESS <ArrowRight size={18} />
+                BUY NOW <ArrowRight size={14} />
               </motion.button>
+            </div>
+
+            {/* Desktop Layout */}
+            <div className="hidden md:flex items-center justify-between gap-3">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-xl overflow-hidden shadow-md">
+                  <img
+                    src="/party-mixtape.png"
+                    alt="Product"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-bold text-gray-900 leading-tight text-sm">
+                    The Party Mixtape
+                  </p>
+                  <p className="text-[10px] gradient-text-gold font-bold uppercase tracking-widest">
+                    Flagship Offer
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-end gap-6">
+                <div>
+                  <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-1 text-right">
+                    OFFER ENDS IN
+                  </p>
+                  <SharedCountdown />
+                </div>
+                <div className="text-right">
+                  <p className="text-[10px] text-gray-400 font-black uppercase tracking-tighter line-through">
+                    ₹4,999
+                  </p>
+                  <p className="text-xl font-black gradient-text-gold">
+                    ₹1,999
+                  </p>
+                </div>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() =>
+                    window.open(
+                      "https://riagupta.com/product/party-mixtape/",
+                      "_blank",
+                    )
+                  }
+                  className="bg-gradient-to-r from-purple-600 to-purple-800 text-white font-black px-5 py-2.5 rounded-2xl shadow-xl shadow-purple-100 flex items-center gap-2 whitespace-nowrap text-sm"
+                >
+                  SECURE ACCESS <ArrowRight size={16} />
+                </motion.button>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -353,14 +390,14 @@ const JourneySection = () => {
       icon: <Headphones className="w-8 h-8" />,
       title: "Press Play",
       description:
-        "No complicated rituals needed. Just put on your headphones before heading to the party and let the energy build.",
+        "No complicated rituals needed. Just put on your headphones before heading to the party and let the manifestation music work.",
       color: "bg-purple-100 text-purple-600",
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Amplify Your Vibe",
       description:
-        "Our proprietary 432Hz audio engineering works during the event, amplifying your confidence, charisma, and magnetic presence in real-time.",
+        "Our proprietary manifestation music works during the event, amplifying your confidence, charisma, and magnetic presence in real-time.",
       color: "bg-pink-100 text-pink-600",
     },
     {
@@ -449,7 +486,7 @@ const QualificationSection = () => {
                 "You find traditional meditation difficult, boring, or impossible to stick to.",
                 "You're tired of 'trying' to manifest without seeing real-world results.",
                 "You have a busy life and need a success ritual that takes ZERO extra time.",
-                "You want to clear subconscious blocks like anxiety, lack, or self-doubt effortlessly.",
+                "You want to clear mental blocks like anxiety, lack, or self-doubt effortlessly.",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-4">
                   <Check size={20} className="text-green-500 shrink-0 mt-1" />
@@ -503,7 +540,7 @@ const ComparisonSection = () => {
   const comparisons = [
     {
       feature: "Audio Quality",
-      wishtune: "Lossless 432Hz Alchemy",
+      wishtune: "Lossless Alchemy",
       youtube: "Compressed MP3/AAC",
     },
     {
@@ -512,8 +549,8 @@ const ComparisonSection = () => {
       youtube: "Unstable Phase Shifts",
     },
     {
-      feature: "Subconscious Layering",
-      wishtune: "Patent-Pending Affirmations",
+      feature: "Manifestation Music Layering",
+      wishtune: "Premium Manifestation Music",
       youtube: "Basic Background Text",
     },
     {
@@ -539,7 +576,7 @@ const ComparisonSection = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto">
-            Why free YouTube frequencies might actually be holding you back.
+            Why free YouTube tracks might actually be holding you back.
           </p>
         </div>
 
@@ -905,25 +942,39 @@ const HomePage = () => {
     {
       id: "party",
       title: "Party Mixtape",
-      subtitle: "High-Energy • Social Magnetism Booster",
+      subtitle: "Groovy Music • Move + Mindset Shift",
       description:
-        "Turn any moment into a manifestation opportunity—dance, socialize, and attract.",
-      fullDetail: `The Party Tape is a 45-minute high-energy mix designed for social settings and high-vibe moments.
+        "Party while you manifest. The Manifestation Mixtape is a 30-minute, high-energy audio experience designed to lift your mood and reinforce positive beliefs while you’re on the move.",
+      fullDetail: `On the surface, it’s fun, upbeat music you’ll want to play again and again.
+Beneath the beats, the manifestation music is designed to lift your mood—no need to focus or follow a routine.
 
-On the surface, it’s modern, upbeat music you’ll love.
-Underneath, we've layered subtle affirmation engineering so your mood and magnetic presence amplify while you enjoy the night.`,
-      duration: "45 minutes",
-      sound:
-        "Upbeat, club-ready mixes with bass-forward production and vocal layering.",
+Dance, drive, clean your room, or work out—this mixtape fits into real life.
+
+Track Duration: 30 minutes
+
+What it sounds like:
+Upbeat pop and dance tracks. Groovy, energetic, and motivating.
+
+Perfect for:
+Parties, workouts, dancing at home, long drives, chores, or anytime you need a boost.
+
+Best for:
+Anyone who wants mindset work to feel fun, effortless, and uplifting.
+
+How to use:
+Press play and go about your day. Headphones optional.
+The more regularly you listen, the stronger the shift.`,
+      duration: "30 minutes",
+      sound: "Upbeat pop and dance tracks. Groovy, energetic, and motivating.",
       perfectFor:
-        "Parties, gatherings, nightlife, pre-event rituals, or dancing.",
+        "Parties, workouts, dancing at home, long drives, chores, or anytime you need a boost.",
       bestFor:
-        "Anyone wanting more confidence, charisma, and social magnetism.",
+        "Anyone who wants mindset work to feel fun, effortless, and uplifting.",
       usage:
-        "Play while out, pre-gaming, or during social events. Headphones optional.",
+        "Press play and go about your day. Headphones optional. The more regularly you listen, the stronger the shift.",
       price: 1999,
-      formattedPrice: "₹1,999",
-      img: "/products/party.png",
+      formattedPrice: "₹1,999.00",
+      img: "/party-mixtape.png",
       color: "bg-brand-dark",
       shopUrl: "https://riagupta.com/product/party-mixtape/",
     },
@@ -968,7 +1019,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
       {/* HERO SECTION */}
       <section
         ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-2 md:px-4 pt-20 md:pt-24 pb-16 md:pb-20 overflow-hidden bg-gradient-to-b from-purple-100/40 via-brand-plum/20 to-amber-50/30"
+        className="relative min-h-[70vh] flex items-center justify-center px-2 md:px-4 pt-20 md:pt-24 pb-16 md:pb-20 overflow-hidden bg-gradient-to-b from-purple-100/40 via-brand-plum/20 to-amber-50/30"
       >
         {/* subtle top light to keep logo visible */}
         <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-white/30 to-transparent pointer-events-none z-0" />
@@ -976,55 +1027,59 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
         <VerticalLinesBackground />
         <WaveBackground />
         <div className="absolute right-20 top-10 w-72 h-72 rounded-full bg-gradient-to-br from-brand-gold/40 to-pink-500/20 blur-3xl opacity-70 pointer-events-none animate-pulse" />
-        <img
-          src="/images/ria-party.jpg"
-          alt="Ria Gupta - Party"
-          className="absolute right-0 lg:right-2 top-1/2 -translate-y-1/2 w-56 md:w-60 lg:w-64 max-h-[70vh] h-auto rounded-2xl object-contain shadow-xl hidden md:block pointer-events-none z-0"
-        />
-        <div className="container-custom max-w-4xl mx-auto text-center relative z-10">
+        <div className="container-custom max-w-2xl mx-auto text-center relative z-10 bg-white/70 rounded-3xl shadow-xl px-6 py-12 md:py-16 backdrop-blur-md">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/5 rounded-full px-6 py-2 mb-8"
+            className="inline-flex items-center gap-2 bg-white/40 backdrop-blur-sm border border-white/10 rounded-full px-5 py-1 mb-6 text-xs md:text-sm font-medium text-purple-700 tracking-widest"
           >
             <Sparkles className="w-4 h-4 text-brand-gold" />
-            <span className="text-sm font-semibold text-purple-700 uppercase tracking-widest">
-              Psychologist-Designed • Music-Powered
-            </span>
+            <span>Psychologist-Designed • Groovy Music</span>
           </motion.div>
 
-        <motion.h1
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.2 }}
-  className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-6 tracking-tight"
->
-  Become the <br />
-  <span className="bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent drop-shadow-[0_2px_6px_rgba(0,0,0,0.15)]">
-    Most Magnetic Person
-  </span>
-  <br />
-  in the room
-</motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl md:text-6xl font-serif font-bold leading-tight mb-4 tracking-tight text-gray-900"
+          >
+            Party while you manifest.
+          </motion.h1>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-3xl md:text-5xl font-serif font-bold mb-8 tracking-tight gradient-text-gold"
+          >
+            Party Mixtape
+          </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-base md:text-lg text-gray-900 font-semibold mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-base md:text-lg text-gray-900 font-medium mb-8 max-w-xl leading-relaxed"
           >
-            The Party Mixtape is a 45-minute high-energy, 432Hz engineered
-            experience designed to amplify your confidence, charisma, and social
-            magnetism in real time.
-            <br />
-            Just press play before you step out — and let the energy work.
+            The Party Mixtape is a 30-minute, high-energy audio experience to
+            lift your mood and reinforce positive beliefs—no routine needed.
           </motion.p>
+          <ul className="text-base md:text-lg text-gray-700 font-normal mb-8 max-w-xl leading-relaxed list-disc list-inside space-y-2">
+            <li>Fun, upbeat music you’ll want to play again and again</li>
+            <li>
+              Manifestation music designed to fit real life—dance, drive, or
+              work out
+            </li>
+            <li>Just press play and feel the shift</li>
+          </ul>
+          <div className="font-bold text-lg md:text-xl text-gray-900 mb-10">
+            Track Duration: 30 minutes
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex justify-center mb-10"
+            className="flex justify-center"
           >
             <motion.button
               onClick={() =>
@@ -1032,7 +1087,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
                   .getElementById("products")
                   .scrollIntoView({ behavior: "smooth" })
               }
-              className="btn-primary"
+              className="btn-primary text-lg md:text-xl px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-transform"
             >
               <PlayCircle size={22} className="animate-pulse" />
               Start Your 21-Day Party Shift
@@ -1069,154 +1124,119 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
       {/* SINGLE PRODUCT SHOWCASE */}
       <section
         id="products"
-        className="py-24 md:py-40 px-4 bg-gradient-to-b from-gray-50 to-white overflow-hidden"
+        className="py-24 md:py-32 px-4 bg-gradient-to-b from-gray-50 to-white overflow-hidden"
       >
-        <div className="container-custom max-w-6xl relative">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Product Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-purple-200 rounded-[3rem] blur-3xl opacity-30 animate-pulse" />
-              <div className="relative rounded-[3rem] overflow-hidden border border-purple-100 shadow-2xl bg-white aspect-[4/5]">
-                <img
-                  src="/products/party.png"
-                  alt="The Party Mixtape"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-8 right-8 bg-purple-600 text-white px-6 py-2 rounded-full text-xs font-black shadow-xl tracking-widest">
-                  FLAGSHIP OFFER
-                </div>
+        <div className="container-custom max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          {/* Product Image */}
+          <div className="w-full max-w-md mx-auto lg:mx-0 lg:w-1/2 flex-shrink-0">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-white aspect-[4/5] w-full mb-6">
+              <img
+                src="/party-mixtape.png"
+                alt="The Party Mixtape"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute top-6 left-6 bg-purple-600 text-white px-4 py-1 rounded-full text-xs font-black shadow-xl tracking-widest">
+                FLAGSHIP OFFER
               </div>
-
-              {/* Trust Badge */}
-              <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-3xl shadow-2xl border border-purple-50 flex items-center gap-4 max-w-[240px]">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
-                  <Shield size={24} />
+            </div>
+            
+            {/* Feature Points Below Image */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 bg-white/60 backdrop-blur-sm rounded-2xl p-3 border border-purple-100">
+                <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center shrink-0">
+                  <Zap className="w-5 h-5 text-purple-600" />
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-gray-900 leading-tight">
-                    100% Secure & Guaranteed
-                  </p>
-                  <p className="text-[10px] text-gray-500 uppercase font-bold tracking-tighter">
-                    Lifetime Access Included
-                  </p>
+                  <p className="text-sm font-bold text-gray-900">Instant Energy Boost</p>
+                  <p className="text-xs text-gray-500">Gamma waves for social confidence</p>
                 </div>
               </div>
-            </motion.div>
-
-            {/* Product Details */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="space-y-10"
-            >
-              <div>
-                <div className="flex items-center gap-3 text-purple-600 font-black text-sm uppercase tracking-[0.3em] mb-4">
-                  <Zap size={16} /> 432Hz Audio Alchemy
+              
+              <div className="flex items-center gap-3 bg-white/60 backdrop-blur-sm rounded-2xl p-3 border border-purple-100">
+                <div className="w-10 h-10 bg-pink-100 rounded-xl flex items-center justify-center shrink-0">
+                  <Timer className="w-5 h-5 text-pink-600" />
                 </div>
-                <div className="flex items-center justify-between gap-4 mb-2">
-                  <h2 className="text-5xl md:text-7xl font-serif font-bold text-gray-900 leading-tight">
-                    The <span className="italic">Party</span> <br />
-                    Mixtape
-                  </h2>
-                  <div className="hidden md:block scale-75 origin-right">
-                    <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mb-2 text-right">
-                      EXPIRES SOON
-                    </p>
-                    <SharedCountdown />
-                  </div>
+                <div>
+                  <p className="text-sm font-bold text-gray-900">20-Minute Pre-Game</p>
+                  <p className="text-xs text-gray-500">Listen before any social event</p>
                 </div>
               </div>
-
-              <p className="text-xl text-gray-500 font-light leading-relaxed">
-                The Party Tape is a 45-minute high-energy mix designed for
-                social settings and high-vibe moments. It's engineered to boost
-                confidence, charisma and magnetic presence while you enjoy the
-                night.
-              </p>
-
-              <div className="space-y-6">
-                {[
-                  "45-Minute Professional Club-Grade Mixing",
-                  "Gamma & High-Beta Energy Layers (Social Focus)",
-                  "Charisma & Confidence Affirmations",
-                  "Lossless Quality • Bass-Forward Production",
-                  "Mobile & Venue-Optimized Listening",
-                ].map((feature, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-4 text-gray-700"
-                  >
-                    <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center shrink-0">
-                      <Check size={14} className="text-purple-600" />
-                    </div>
-                    <span className="font-medium">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="pt-8 border-t border-purple-100">
-                <div className="flex items-end gap-4 mb-8">
-                  <div>
-                    <p className="text-gray-400 text-sm font-bold uppercase tracking-widest line-through">
-                      ₹4,999
-                    </p>
-                    <p className="text-6xl font-bold gradient-text-gold">
-                      ₹1,999
-                    </p>
-                  </div>
-                  <div className="bg-brand-gold/20 text-brand-dark px-4 py-2 rounded-2xl text-xs font-black uppercase tracking-widest mb-2">
-                    LIMITED DROP
-                  </div>
+              
+              <div className="flex items-center gap-3 bg-white/60 backdrop-blur-sm rounded-2xl p-3 border border-purple-100">
+                <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center shrink-0">
+                  <Sparkles className="w-5 h-5 text-amber-600" />
                 </div>
-
-                <div className="flex flex-col gap-4">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={() =>
-                      window.open(
-                        "https://riagupta.com/product/party-mixtape/",
-                        "_blank",
-                      )
-                    }
-                    className="w-full btn-primary text-brand-dark text-2xl py-6 rounded-[2rem] shadow-glow-lg border border-brand-gold/20 flex items-center justify-center gap-4 group"
-                  >
-                    YES! SECURE MY MIXTAPE{" "}
-                    <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-                  </motion.button>
-                  <p className="text-center text-gray-400 text-xs font-medium uppercase tracking-[0.2em]">
-                    Instant Digital Delivery • One-Time Payment
-                  </p>
+                <div>
+                  <p className="text-sm font-bold text-gray-900">Magnetic Aura Activation</p>
+                  <p className="text-xs text-gray-500">Command attention naturally</p>
                 </div>
-
-                <BonusStack />
               </div>
-            </motion.div>
+            </div>
           </div>
 
-          <div className="flex items-center justify-center gap-6 pt-4 grayscale opacity-40">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg"
-              alt="Stripe"
-              className="h-6"
-            />
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
-              alt="PayPal"
-              className="h-6"
-            />
-            <div className="w-px h-8 bg-gray-200" />
-            <div className="flex items-center gap-1">
-              <Lock size={14} />
-              <span className="text-[10px] font-black uppercase tracking-widest">
-                Secure SSL
+          {/* Product Details */}
+          <div className="w-full lg:w-1/2 bg-white/80 rounded-3xl shadow-xl p-8 md:p-12 flex flex-col justify-center">
+            <div className="mb-4">
+              <span className="inline-block text-xs font-bold uppercase tracking-widest text-purple-600 mb-2">
+                Manifestation Music
               </span>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-2">
+                The <span className="italic">Party</span> Mixtape
+              </h2>
+            </div>
+            <p className="text-lg text-gray-700 mb-6">
+              The Party Tape is a 30-minute high-energy mix designed for social
+              settings and high-vibe moments. It's engineered to boost
+              confidence, charisma and magnetic presence while you enjoy the
+              night.
+            </p>
+            <ul className="mb-8 border-l-4 border-purple-200 pl-6 space-y-3">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 text-purple-500">✔</span> Upbeat pop and
+                dance tracks. Groovy, energetic, and motivating.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 text-purple-500">✔</span> Parties,
+                workouts, dancing at home, long drives, chores, or anytime you
+                need a boost.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 text-purple-500">✔</span> Anyone who wants
+                mindset work to feel fun, effortless, and uplifting.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 text-purple-500">✔</span> Press play and
+                go about your day. Headphones optional. The more regularly you
+                listen, the stronger the shift.
+              </li>
+            </ul>
+            <div className="flex items-end gap-4 mb-8">
+              <div>
+                <p className="text-gray-400 text-sm font-bold uppercase tracking-widest line-through">
+                  ₹4,999
+                </p>
+                <p className="text-5xl md:text-6xl font-bold gradient-text-gold">
+                  ₹1,999
+                </p>
+              </div>
+              <div className="bg-brand-gold/20 text-brand-dark px-4 py-2 rounded-2xl text-xs font-black uppercase tracking-widest mb-2">
+                LIMITED DROP
+              </div>
+            </div>
+            <button
+              onClick={() =>
+                window.open(
+                  "https://riagupta.com/product/party-mixtape/",
+                  "_blank",
+                )
+              }
+              className="w-full btn-primary text-brand-dark text-xl py-5 rounded-full shadow-lg flex items-center justify-center gap-4 group mb-2 hover:scale-105 transition-transform"
+            >
+              YES! SECURE MY MIXTAPE{" "}
+              <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+            </button>
+            <div className="text-center text-gray-400 text-xs font-medium uppercase tracking-[0.2em] mt-2">
+              Instant Digital Delivery • One-Time Payment
             </div>
           </div>
         </div>
@@ -1281,8 +1301,8 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
           <div className="space-y-8">
             {[
               {
-                q: "Will I hear the affirmations?",
-                a: "No, the affirmations are layered beneath the music using patent-pending frequency modulation. They bypass your conscious 'logical' mind and go straight to your subconscious. You'll just hear high-vibe, premium music.",
+                q: "Will I hear the manifestation music?",
+                a: "No, the manifestation music is blended with the tracks. You'll just hear high-vibe, premium music.",
               },
               {
                 q: "How long before I see results?",
@@ -1290,7 +1310,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
               },
               {
                 q: "Is this scientifically proven?",
-                a: "Our music uses neuro-acoustic principles like binaural beats and isochronic tones to move your brain into Alpha and Theta states—the states most receptive to new information and manifestation.",
+                a: "Our music uses manifestation music layering to help you feel your best. The process is designed to make manifestation effortless and enjoyable.",
               },
               {
                 q: "What if it doesn't work for me?",

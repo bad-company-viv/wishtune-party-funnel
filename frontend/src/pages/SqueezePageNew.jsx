@@ -12,6 +12,9 @@ import {
   Play,
   ShieldCheck,
   Heart,
+  UserCheck,
+  UserX,
+  X,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -186,7 +189,7 @@ const SqueezePage = () => {
           </div>
         </motion.div>
 
-        {/* 2. MAIN HOOK (Who is this for? / What problem does it solve?) */}
+        {/* 2. MAIN HOOK (Manifestation Messaging) */}
         <div className="text-center mb-12">
           <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
@@ -194,9 +197,13 @@ const SqueezePage = () => {
             transition={{ delay: 0.2 }}
             className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold leading-[1.05] mb-8"
           >
-            Command The <br />
-            Party <br />
-            <span className="gradient-text-gold">Tonight.</span>
+            Manifest Instantly
+            <br />
+            <span className="text-gray-400 italic font-light">
+              No Rituals. No Waiting.
+            </span>
+            <br />
+            <span className="gradient-text-gold">Just Press Play.</span>
           </motion.h1>
 
           <motion.div
@@ -206,14 +213,28 @@ const SqueezePage = () => {
             className="max-w-2xl mx-auto space-y-4"
           >
             <p className="text-xl md:text-2xl text-gray-700 font-light leading-relaxed">
-              Tired of fading into the background? Stop waiting and start
-              shining.
+              Stop overthinking. Stop waiting. Stop playing small.
+              <br />
+              <strong>Just press play.</strong> At parties, events, or anywhere
+              you want to shine.
             </p>
             <p className="text-brand-gold font-bold text-2xl">
-              Download the 5-Minute "Magnetism Booster" Track.
+              Download the 5-Minute "Manifestation Magnetism" Track.
             </p>
           </motion.div>
         </div>
+
+
+        {/* 6. Testimonial Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+          className="mt-16 text-center text-gray-600 text-lg italic"
+        >
+          "I manifested more confidence in 15 minutes of listening than I did in
+          15 years of self-doubt." — Sarah M.
+        </motion.div>
 
         {/* 3. THE LEAD MAGNET BOX */}
         <motion.div
@@ -230,7 +251,7 @@ const SqueezePage = () => {
                 FREE DIGITAL DOWNLOAD
               </span>
               <h2 className="text-2xl md:text-3xl font-serif font-bold mb-2">
-                The 432Hz "Magnetism Booster"
+                The  "Magnetism Booster"
               </h2>
               <h3 className="text-gray-600 font-serif italic text-xl">
                 Command Your Presence.
