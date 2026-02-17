@@ -1019,7 +1019,7 @@ The more regularly you listen, the stronger the shift.`,
       {/* HERO SECTION */}
       <section
         ref={heroRef}
-        className="relative min-h-[70vh] lg:min-h-[125vh] flex items-center justify-center px-2 md:px-4 pt-20 md:pt-24 pb-16 md:pb-20 overflow-hidden bg-gradient-to-b from-purple-100/40 via-brand-plum/20 to-amber-50/30"
+        className="relative min-h-[70vh] lg:min-h-[125vh] flex items-center justify-center px-2 md:px-4 pt-12 md:pt-16 pb-16 md:pb-20 overflow-hidden bg-gradient-to-b from-purple-100/40 via-brand-plum/20 to-amber-50/30"
       >
         {/* subtle top light to keep logo visible */}
         <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-white/30 to-transparent pointer-events-none z-0" />
@@ -1027,7 +1027,7 @@ The more regularly you listen, the stronger the shift.`,
         <VerticalLinesBackground />
         <WaveBackground />
         <div className="absolute right-20 top-10 w-72 h-72 rounded-full bg-gradient-to-br from-brand-gold/40 to-pink-500/20 blur-3xl opacity-70 pointer-events-none animate-pulse" />
-        <div className="container-custom max-w-2xl mx-auto text-center relative z-10 bg-white/70 rounded-3xl shadow-xl px-6 py-12 md:py-16 backdrop-blur-md">
+        <div className="container-custom max-w-5xl mx-auto text-center relative z-10 bg-white/70 rounded-3xl shadow-xl px-6 py-12 md:py-16 backdrop-blur-md">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -1041,7 +1041,7 @@ The more regularly you listen, the stronger the shift.`,
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-serif font-bold leading-tight mb-4 tracking-tight text-gray-900"
+            className="text-5xl md:text-7xl font-serif font-bold leading-tight mb-4 tracking-tight text-gray-900"
           >
             Party while you manifest.
           </motion.h1>
@@ -1049,7 +1049,7 @@ The more regularly you listen, the stronger the shift.`,
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-3xl md:text-5xl font-serif font-bold mb-8 tracking-tight gradient-text-gold"
+            className="text-4xl md:text-6xl font-serif font-bold mb-8 tracking-tight gradient-text-gold"
           >
             Party Mixtape
           </motion.h2>
@@ -1058,12 +1058,12 @@ The more regularly you listen, the stronger the shift.`,
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-base md:text-lg text-gray-900 font-medium mb-8 max-w-xl leading-relaxed"
+            className="text-lg md:text-2xl text-gray-900 font-medium mb-8 max-w-3xl mx-auto leading-relaxed"
           >
             The Party Mixtape is a 30-minute, high-energy audio experience to
             lift your mood and reinforce positive beliefs—no routine needed.
           </motion.p>
-          <ul className="text-base md:text-lg text-gray-700 font-normal mb-8 max-w-xl leading-relaxed list-disc list-inside space-y-2">
+          <ul className="text-lg md:text-2xl text-gray-700 font-normal mb-8 max-w-3xl mx-auto leading-relaxed list-disc list-inside space-y-2">
             <li>Fun, upbeat music you’ll want to play again and again</li>
             <li>
               Manifestation music designed to fit real life—dance, drive, or
@@ -1071,7 +1071,7 @@ The more regularly you listen, the stronger the shift.`,
             </li>
             <li>Just press play and feel the shift</li>
           </ul>
-          <div className="font-bold text-lg md:text-xl text-gray-900 mb-10">
+          <div className="font-bold text-xl md:text-2xl text-gray-900 mb-10">
             Track Duration: 30 minutes
           </div>
 
