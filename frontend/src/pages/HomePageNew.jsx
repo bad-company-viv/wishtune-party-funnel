@@ -558,11 +558,6 @@ const ComparisonSection = () => {
       wishtune: "100% Ad-Free Forever",
       youtube: "Frequent Distractions",
     },
-    {
-      feature: "Party Mode",
-      wishtune: "Optimized for High-Energy Venues",
-      youtube: "Battery Drain in Venue Settings",
-    },
   ];
 
   return (
@@ -1049,7 +1044,7 @@ The more regularly you listen, the stronger the shift.`,
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl md:text-6xl font-serif font-bold mb-8 tracking-tight gradient-text-gold"
+            className="text-4xl md:text-6xl font-serif font-bold mb-8 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-amber-500 via-amber-300 to-amber-500"
           >
             Party Mixtape
           </motion.h2>
@@ -1063,7 +1058,7 @@ The more regularly you listen, the stronger the shift.`,
             The Party Mixtape is a 30-minute, high-energy audio experience to
             lift your mood and reinforce positive beliefs—no routine needed.
           </motion.p>
-          <ul className="text-lg md:text-2xl text-gray-700 font-normal mb-8 max-w-3xl mx-auto leading-relaxed list-disc list-inside space-y-2">
+          <ul className="text-lg md:text-2xl text-gray-700 font-normal mb-8 max-w-3xl mx-auto leading-relaxed text-left list-disc list-outside pl-8 space-y-2">
             <li>Fun, upbeat music you’ll want to play again and again</li>
             <li>
               Manifestation music designed to fit real life—dance, drive, or
@@ -1090,7 +1085,7 @@ The more regularly you listen, the stronger the shift.`,
               className="btn-primary text-lg md:text-xl px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-transform"
             >
               <PlayCircle size={22} className="animate-pulse" />
-              Start Your 21-Day Party Shift
+              Start Manifesting
             </motion.button>
           </motion.div>
         </div>
@@ -1148,7 +1143,6 @@ The more regularly you listen, the stronger the shift.`,
                 </div>
                 <div>
                   <p className="text-sm font-bold text-gray-900">Instant Energy Boost</p>
-                  <p className="text-xs text-gray-500">Gamma waves for social confidence</p>
                 </div>
               </div>
               

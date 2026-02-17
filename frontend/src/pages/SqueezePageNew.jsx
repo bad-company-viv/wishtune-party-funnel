@@ -267,7 +267,7 @@ const SqueezePage = () => {
               <div className="flex items-center gap-3 text-gray-700">
                 <Check className="text-brand-gold" size={18} />{" "}
                 <span>
-                  Neuro-Acoustic Beta Wave Tuning (Confidence & Energy)
+                  Mood-boosting audio designed for confidence and energy
                 </span>
               </div>
             </div>
