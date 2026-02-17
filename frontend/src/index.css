@@ -218,6 +218,12 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .desktop-zoom-80 {
+    zoom: 0.8;
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;

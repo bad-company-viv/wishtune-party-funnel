@@ -1007,7 +1007,7 @@ The more regularly you listen, the stronger the shift.`,
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 text-[92%] md:text-[90%] lg:text-[90%]">
+    <div className="min-h-screen bg-white text-gray-900 desktop-zoom-80">
       <StickyPurchaseBar isVisible={showStickyBar} />
       <AudioPreview />
       <PurchaseNotification />
@@ -1019,7 +1019,7 @@ The more regularly you listen, the stronger the shift.`,
       {/* HERO SECTION */}
       <section
         ref={heroRef}
-        className="relative min-h-[70vh] flex items-center justify-center px-2 md:px-4 pt-20 md:pt-24 pb-16 md:pb-20 overflow-hidden bg-gradient-to-b from-purple-100/40 via-brand-plum/20 to-amber-50/30"
+        className="relative min-h-[70vh] lg:min-h-[125vh] flex items-center justify-center px-2 md:px-4 pt-20 md:pt-24 pb-16 md:pb-20 overflow-hidden bg-gradient-to-b from-purple-100/40 via-brand-plum/20 to-amber-50/30"
       >
         {/* subtle top light to keep logo visible */}
         <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-white/30 to-transparent pointer-events-none z-0" />
