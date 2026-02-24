@@ -966,13 +966,13 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
       {/* HERO SECTION */}
       <section
         ref={heroRef}
-        className="relative pt-32 pb-20 md:pt-40 md:pb-32 px-4 overflow-hidden bg-gradient-to-br from-purple-50/50 via-white to-pink-50/50"
+        className="relative pt-24 pb-16 md:pt-28 md:pb-24 px-4 overflow-hidden bg-gradient-to-br from-purple-50/50 via-white to-pink-50/50"
       >
         <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-white to-transparent pointer-events-none z-0" />
         <PartyBackgroundElements />
         <VerticalLinesBackground />
 
-        <div className="container-custom max-w-7xl mx-auto relative z-10 flex min-h-[70vh] items-center">
+        <div className="container-custom max-w-7xl mx-auto relative z-10 flex min-h-[60vh] lg:min-h-[50vh] items-center">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center w-full">
 
             {/* Text Content */}
@@ -992,7 +992,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-[1.1] mb-6 tracking-tight text-gray-900"
+                className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-[1.1] mb-6 tracking-tight text-gray-900"
               >
                 Become the <br />
                 <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent pb-2 block">
@@ -1039,7 +1039,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
-              className="relative w-full max-w-md mx-auto lg:ml-auto h-[400px] md:h-[500px] lg:h-[600px] order-1 lg:order-2"
+              className="relative w-full max-w-sm mx-auto lg:ml-auto h-[400px] md:h-[450px] lg:h-[480px] order-1 lg:order-2"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-purple-300 to-pink-300 rounded-[3rem] blur-3xl opacity-30 animate-pulse" />
 
