@@ -55,14 +55,6 @@ const Footer = () => {
 
           <div className="flex gap-4 items-center flex-wrap justify-center">
             <a href="https://riagupta.com/blog" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-gold font-bold hover:text-gray-900 transition-colors uppercase tracking-widest underline decoration-brand-gold/30 underline-offset-4">Ria's Blogs</a>
-            <span className="text-gray-300 hidden md:inline">|</span>
-            <a href="https://riagupta.com/shop/" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-500 hover:text-gray-900 transition-colors uppercase tracking-widest">The Sound Laboratory</a>
-            <span className="text-gray-300 hidden md:inline">|</span>
-            <a href="/privacy-policy" className="text-xs text-gray-500 hover:text-gray-900 transition-colors">Privacy Policy</a>
-            <span className="text-gray-300">|</span>
-            <a href="/terms-conditions" className="text-xs text-gray-500 hover:text-gray-900 transition-colors">Terms & Conditions</a>
-            <span className="text-gray-300">|</span>
-            <a href="/refund-policy" className="text-xs text-gray-500 hover:text-gray-900 transition-colors">Refund Policy</a>
           </div>
         </div>
       </div>

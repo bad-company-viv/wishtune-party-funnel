@@ -33,7 +33,7 @@ export const products = [
     title: "Party Mixtape",
     price: "₹1,999",
     priceValue: 1999,
-    image: "/products/party.png",
+    image: "/images/party-mixtape.png",
     description:
       "High-vibe frequencies to shift your energy before a social event. Magnetic aura activation.",
     features: [

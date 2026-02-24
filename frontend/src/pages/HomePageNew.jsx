@@ -136,7 +136,7 @@ const StickyPurchaseBar = ({ isVisible }) => {
             <div className="hidden md:flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md">
                 <img
-                  src="/products/party.png"
+                  src="/images/party-mixtape.png"
                   alt="Product"
                   className="w-full h-full object-cover"
                 />
@@ -599,13 +599,12 @@ const PartyBackgroundElements = () => {
             ease: "easeInOut",
             delay: i * 0.3,
           }}
-          className={`absolute rounded-full blur-3xl w-32 h-32 ${
-            i % 3 === 0
-              ? "bg-brand-gold/20"
-              : i % 3 === 1
-                ? "bg-purple-400/15"
-                : "bg-pink-400/15"
-          }`}
+          className={`absolute rounded-full blur-3xl w-32 h-32 ${i % 3 === 0
+            ? "bg-brand-gold/20"
+            : i % 3 === 1
+              ? "bg-purple-400/15"
+              : "bg-pink-400/15"
+            }`}
         />
       ))}
 
@@ -628,9 +627,8 @@ const PartyBackgroundElements = () => {
             ease: "easeInOut",
             delay: i * 0.2,
           }}
-          className={`absolute rounded-full w-2 h-2 ${
-            i % 2 === 0 ? "bg-brand-gold" : "bg-purple-500"
-          }`}
+          className={`absolute rounded-full w-2 h-2 ${i % 2 === 0 ? "bg-brand-gold" : "bg-purple-500"
+            }`}
         />
       ))}
 
@@ -968,76 +966,106 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
       {/* HERO SECTION */}
       <section
         ref={heroRef}
-        className="relative min-h-screen flex items-center justify-center px-2 md:px-4 pt-20 md:pt-24 pb-16 md:pb-20 overflow-hidden bg-gradient-to-b from-purple-100/40 via-brand-plum/20 to-amber-50/30"
+        className="relative pt-32 pb-20 md:pt-40 md:pb-32 px-4 overflow-hidden bg-gradient-to-br from-purple-50/50 via-white to-pink-50/50"
       >
-        {/* subtle top light to keep logo visible */}
-        <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-white/30 to-transparent pointer-events-none z-0" />
+        <div className="absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-white to-transparent pointer-events-none z-0" />
         <PartyBackgroundElements />
         <VerticalLinesBackground />
-        <WaveBackground />
-        <div className="absolute right-20 top-10 w-72 h-72 rounded-full bg-gradient-to-br from-brand-gold/40 to-pink-500/20 blur-3xl opacity-70 pointer-events-none animate-pulse" />
-        <img
-          src="/images/ria-party.jpg"
-          alt="Ria Gupta - Party"
-          className="absolute right-0 lg:right-2 top-1/2 -translate-y-1/2 w-56 md:w-60 lg:w-64 max-h-[70vh] h-auto rounded-2xl object-contain shadow-xl hidden md:block pointer-events-none z-0"
-        />
-        <div className="container-custom max-w-4xl mx-auto text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/5 rounded-full px-6 py-2 mb-8"
-          >
-            <Sparkles className="w-4 h-4 text-brand-gold" />
-            <span className="text-sm font-semibold text-purple-700 uppercase tracking-widest">
-              Psychologist-Designed • Music-Powered
-            </span>
-          </motion.div>
 
-        <motion.h1
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.2 }}
-  className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-6 tracking-tight"
->
-  Become the <br />
-  <span className="bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent drop-shadow-[0_2px_6px_rgba(0,0,0,0.15)]">
-    Most Magnetic Person
-  </span>
-  <br />
-  in the room
-</motion.h1>
+        <div className="container-custom max-w-7xl mx-auto relative z-10 flex min-h-[70vh] items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center w-full">
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-base md:text-lg text-gray-900 font-semibold mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed"
-          >
-            The Party Mixtape is a 45-minute high-energy, 432Hz engineered
-            experience designed to amplify your confidence, charisma, and social
-            magnetism in real time.
-            <br />
-            Just press play before you step out — and let the energy work.
-          </motion.p>
+            {/* Text Content */}
+            <div className="text-center lg:text-left flex flex-col justify-center max-w-2xl mx-auto lg:mx-0 order-2 lg:order-1">
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-md border border-purple-100 rounded-full px-5 py-2 mb-8 mx-auto lg:mx-0 shadow-sm"
+              >
+                <Sparkles className="w-4 h-4 text-purple-600" />
+                <span className="text-xs font-bold text-purple-700 uppercase tracking-widest">
+                  Psychologist-Designed • Music-Powered
+                </span>
+              </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex justify-center mb-10"
-          >
-            <motion.button
-              onClick={() =>
-                document
-                  .getElementById("products")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
-              className="btn-primary"
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-[1.1] mb-6 tracking-tight text-gray-900"
+              >
+                Become the <br />
+                <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent pb-2 block">
+                  Most Magnetic Person
+                </span>
+                in the room
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-lg mx-auto lg:mx-0"
+              >
+                The Party Mixtape is a 45-minute high-energy, 432Hz engineered
+                experience designed to amplify your confidence, charisma, and social
+                magnetism in real time.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="flex justify-center lg:justify-start"
+              >
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() =>
+                    document
+                      .getElementById("products")
+                      .scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold py-4 px-8 rounded-full shadow-[0_10px_40px_-10px_rgba(147,51,234,0.5)] flex items-center justify-center gap-3 text-lg"
+                >
+                  <PlayCircle className="w-6 h-6 animate-pulse" />
+                  Start Your 21-Day Party Shift
+                </motion.button>
+              </motion.div>
+            </div>
+
+            {/* Vertical Image Gallery/Showcase */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="relative w-full max-w-md mx-auto lg:ml-auto h-[400px] md:h-[500px] lg:h-[600px] order-1 lg:order-2"
             >
-              <PlayCircle size={22} className="animate-pulse" />
-              Start Your 21-Day Party Shift
-            </motion.button>
-          </motion.div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-purple-300 to-pink-300 rounded-[3rem] blur-3xl opacity-30 animate-pulse" />
+
+              {/* The main image card */}
+              <div className="absolute inset-2 rounded-[2.5rem] overflow-hidden shadow-2xl bg-white border border-purple-50">
+                <img
+                  src="/images/ria-party.jpg"
+                  alt="Party Experience"
+                  className="w-full h-full object-cover"
+                />
+                {/* Overlay gradient for depth */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+
+                {/* Status pill floating on image */}
+                <div className="absolute bottom-6 left-6 right-6 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-4 flex items-center gap-4 text-white">
+                  <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center text-purple-600 shadow-lg shrink-0">
+                    <Sparkles size={20} />
+                  </div>
+                  <div>
+                    <p className="font-bold text-sm tracking-widest uppercase">High Vibe Energy</p>
+                    <p className="text-xs text-white/90 mt-0.5">432Hz Frequency Active</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -1083,11 +1111,11 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
               <div className="absolute inset-0 bg-purple-200 rounded-[3rem] blur-3xl opacity-30 animate-pulse" />
               <div className="relative rounded-[3rem] overflow-hidden border border-purple-100 shadow-2xl bg-white aspect-[4/5]">
                 <img
-                  src="/products/party.png"
+                  src="/images/party-mixtape.png"
                   alt="The Party Mixtape"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-8 right-8 bg-purple-600 text-white px-6 py-2 rounded-full text-xs font-black shadow-xl tracking-widest">
+                <div className="absolute top-8 left-8 bg-purple-600 text-white px-6 py-2 rounded-full text-xs font-black shadow-xl tracking-widest">
                   FLAGSHIP OFFER
                 </div>
               </div>
@@ -1113,7 +1141,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-10"
+              className="bg-white rounded-[3rem] p-8 md:p-12 shadow-xl border border-purple-50 space-y-10"
             >
               <div>
                 <div className="flex items-center gap-3 text-purple-600 font-black text-sm uppercase tracking-[0.3em] mb-4">
