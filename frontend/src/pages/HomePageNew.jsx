@@ -89,11 +89,11 @@ const AudioPreview = () => {
             />
           )}
         </button>
-        {/* <audio
+        <audio
           ref={audioRef}
           src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" // Placeholder audio
           onEnded={() => setIsPlaying(false)}
-        /> */}
+        />
         <div className="absolute -top-2 -right-2 bg-pink-500 text-white text-[10px] font-black px-2 py-1 rounded-full shadow-lg animate-bounce">
           PREVIEW
         </div>
@@ -132,6 +132,7 @@ const VerticalLinesBackground = () => (
 // Purchase Notification Component
 const PurchaseNotification = () => {
   const [notification, setNotification] = useState(null);
+  const lastIndexRef = useRef(-1);
   const notifications = [
     {
       name: "Rahul S.",
@@ -142,7 +143,7 @@ const PurchaseNotification = () => {
     {
       name: "Ananya K.",
       location: "Bangalore",
-      tape: "Party Reset Bundle",
+      tape: "Party Mixtape",
       time: "2 minutes ago",
     },
     {
@@ -154,7 +155,7 @@ const PurchaseNotification = () => {
     {
       name: "Sarah J.",
       location: "London",
-      tape: "Social Magnet Protocol",
+      tape: "Party Mixtape",
       time: "1 minute ago",
     },
     {
@@ -163,15 +164,43 @@ const PurchaseNotification = () => {
       tape: "Party Mixtape",
       time: "5 minutes ago",
     },
+    {
+      name: "Kabir D.",
+      location: "Pune",
+      tape: "Party Mixtape",
+      time: "Just now",
+    },
+    {
+      name: "Roshni M.",
+      location: "Singapore",
+      tape: "Party Mixtape",
+      time: "10 minutes ago",
+    },
+    {
+      name: "Arjun P.",
+      location: "Vancouver",
+      tape: "Party Mixtape",
+      time: "3 minutes ago",
+    },
+    {
+      name: "Meera V.",
+      location: "Melbourne",
+      tape: "Party Mixtape",
+      time: "Just now",
+    }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const random =
-        notifications[Math.floor(Math.random() * notifications.length)];
-      setNotification(random);
+      let nextIndex;
+      do {
+        nextIndex = Math.floor(Math.random() * notifications.length);
+      } while (nextIndex === lastIndexRef.current);
+
+      lastIndexRef.current = nextIndex;
+      setNotification(notifications[nextIndex]);
       setTimeout(() => setNotification(null), 5000);
-    }, 15000);
+    }, 35000);
     return () => clearInterval(interval);
   }, []);
 
@@ -256,7 +285,7 @@ const ExitPopup = ({ isOpen, onClose }) => {
             </h2>
 
             <p className="text-gray-500 mb-10 text-lg font-light leading-relaxed">
-              I have a special gift for you—a 10-minute{" "}
+              I have a special gift for you: a 10-minute{" "}
               <strong>Manifestation Track</strong> to help you shift your mood
               instantly.
             </p>
@@ -278,7 +307,7 @@ const ExitPopup = ({ isOpen, onClose }) => {
                 onClick={onClose}
                 className="text-gray-400 text-xs font-bold uppercase tracking-widest hover:text-gray-600 transition-colors"
               >
-                No thanks, I'll pass on the free track
+                No thanks, I'll pass on the free track.
               </button>
             </div>
           </motion.div>
@@ -313,8 +342,9 @@ const QualificationSection = () => (
           </div>
           <ul className="space-y-6">
             {[
+              "You already listen to music daily, while driving, partying, or doing chores.",
               "You're curious about the link between psychology, music, and mindset change.",
-              "You want science-backed, ethically positioned tools — not generic 'law of attraction' content.",
+              "You want science-backed, ethically positioned tools, not generic 'law of attraction' content.",
               "You feel stuck in patterns that willpower alone can't seem to break.",
               "You're open to a long-term, education-led approach to transformation.",
             ].map((item, i) => (
@@ -342,7 +372,7 @@ const QualificationSection = () => (
             {[
               "You're looking for an overnight miracle or instant results without any consistency.",
               "You want generic affirmations or unscientific 'good vibes only' content.",
-              "You aren't willing to give the process time — real subconscious shift takes 21+ days.",
+              "You aren't willing to give the process time - real subconscious shift takes 21+ days.",
               "You're not open to understanding the psychology behind the tools you use.",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-4">
@@ -517,7 +547,7 @@ const AboutFounderSection = () => (
           <div className="relative rounded-[2.5rem] overflow-hidden border border-purple-100 shadow-2xl">
             <img
               src="/images/founder.jpeg"
-              alt="Ria Gupta — Psychologist & Music Producer"
+              alt="Ria Gupta - Psychologist & Music Producer"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
             />
             {/* Credentials badge */}
@@ -552,7 +582,7 @@ const AboutFounderSection = () => (
           <div className="space-y-5 text-lg text-gray-500 font-light leading-relaxed">
             <p>Ria Gupta is a trained psychologist and music producer working at the intersection of psychology, sound healing, and subconscious reprogramming.</p>
             <p>Her work combines <strong className="text-gray-700">scientifically-informed audio engineering</strong> with deep psychological understanding of how the mind processes and adopts new beliefs.</p>
-            <p>"Most manifestation content is too generic, too mystical, or too vague. I wanted to build something grounded — where the science is real and the results are verifiable."</p>
+            <p>"Most manifestation content is too generic, too mystical, or too vague. I wanted to build something grounded - where the science is real and the results are verifiable."</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -578,7 +608,7 @@ const AboutFounderSection = () => (
             >
               Ria Gupta
             </a>
-            <p className="text-purple-600 italic font-medium">&mdash; Founder, Wishtune</p>
+            <p className="text-purple-600 italic font-medium"> Founder, Wishtune</p>
           </div>
         </motion.div>
       </div>
@@ -640,7 +670,7 @@ const BonusStack = () => {
 };
 
 
-// Science Education Section — NEW (TOFU Phase 1)
+// Science Education Section - NEW (TOFU Phase 1)
 const ScienceSection = () => {
   const pillars = [
     {
@@ -652,7 +682,7 @@ const ScienceSection = () => {
     {
       icon: <Layers className="w-8 h-8" />,
       title: "Layered Audio Architecture",
-      description: "Affirmations and manifestations are embedded beneath the music — accessible to your subconscious, not your conscious resistance.",
+      description: "Affirmations and manifestations are embedded beneath the music - accessible to your subconscious, not your conscious resistance.",
       color: "bg-pink-100 text-pink-600"
     },
     {
@@ -674,7 +704,7 @@ const ScienceSection = () => {
             Why This Music <br /><span className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent italic">Works Differently.</span>
           </h2>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto font-light leading-relaxed">
-            This isn't background music. It's a precision-designed tool for subconscious transformation — built at the intersection of psychology, sound engineering, and mindset science.
+            This isn't background music. It's a precision-designed tool for subconscious transformation - built at the intersection of psychology, sound engineering, and mindset science.
           </p>
         </div>
 
@@ -714,9 +744,9 @@ const ScienceSection = () => {
                 What is Subconscious Reprogramming?
               </h3>
               <div className="space-y-5 text-gray-600 font-light leading-relaxed text-lg">
-                <p>Your subconscious mind runs 95% of your daily behaviour — beliefs, habits, emotional patterns — all operating beneath your awareness.</p>
+                <p>Your subconscious mind runs 95% of your daily behaviour - beliefs, habits, emotional patterns - all operating beneath your awareness.</p>
                 <p>Most people try to change through willpower alone, working against their own subconscious programming. <span className="text-purple-700 font-semibold">That's why it doesn't stick.</span></p>
-                <p>Ria's music bypasses the critical conscious mind and speaks directly to the subconscious — during relaxed, receptive states where real change happens.</p>
+                <p>Ria's music bypasses the critical conscious mind and speaks directly to the subconscious - during relaxed, receptive states where real change happens.</p>
               </div>
             </div>
             <div className="space-y-4">
@@ -759,7 +789,7 @@ const FunnelJourneySection = () => {
       number: "01",
       phase: "Awareness",
       title: "Understand What's Possible",
-      description: "Learn how subconscious programming, sound healing, and layered audio actually work. Education first — curiosity before commitment.",
+      description: "Learn how subconscious programming, sound healing, and layered audio actually work. Education first - curiosity before commitment.",
       icon: <BookOpen className="w-8 h-8" />,
       color: "from-purple-100 to-purple-50",
       accent: "text-purple-600",
@@ -769,7 +799,7 @@ const FunnelJourneySection = () => {
       number: "02",
       phase: "Trust",
       title: "Experience Before You Decide",
-      description: "Download a free track. Feel the shift. Experience Ria's work before making any decisions — trust built through experience, not promises.",
+      description: "Download a free track. Feel the shift. Experience Ria's work before making any decisions - trust built through experience, not promises.",
       icon: <Headphones className="w-8 h-8" />,
       color: "from-pink-100 to-pink-50",
       accent: "text-pink-600",
@@ -779,7 +809,7 @@ const FunnelJourneySection = () => {
       number: "03",
       phase: "Explore",
       title: "Find What Fits You",
-      description: "From the core healing music package to guided coaching sessions — choose the depth that matches where you are on your journey.",
+      description: "From the core healing music package to guided coaching sessions - choose the depth that matches where you are on your journey.",
       icon: <Layers className="w-8 h-8" />,
       color: "from-indigo-100 to-indigo-50",
       accent: "text-indigo-600",
@@ -789,7 +819,7 @@ const FunnelJourneySection = () => {
       number: "04",
       phase: "Transform",
       title: "Long-Term Subconscious Journey",
-      description: "Consistent listening rewires your baseline — clarity, confidence, and a new identity that reflects what you're actually capable of.",
+      description: "Consistent listening rewires your baseline - clarity, confidence, and a new identity that reflects what you're actually capable of.",
       icon: <Sparkles className="w-8 h-8" />,
       color: "from-amber-100 to-amber-50",
       accent: "text-amber-600",
@@ -807,7 +837,7 @@ const FunnelJourneySection = () => {
             Transformation in <br /><span className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent italic">Four Phases</span>
           </h2>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto font-light leading-relaxed">
-            From curiosity to credibility to conversion — we don't rush this. Real change takes the right sequence.
+            From curiosity to credibility to conversion - we don't rush this. Real change takes the right sequence.
           </p>
         </div>
 
@@ -845,21 +875,21 @@ const FunnelJourneySection = () => {
   );
 };
 
-// Product Ladder Section (NEW — 3 tiers per MoM)
+// Product Ladder Section (NEW - 3 tiers per MoM)
 const ProductLadderSection = () => {
   const navigate = useNavigate();
   const tiers = [
     {
       level: "Start Here",
       title: "Manifestation Track",
-      subtitle: "10-Min Sleep-Optimized Audio",
-      description: "Experience Ria's work before anything else. A special sleep-priming track to shift your subconscious state while you drift off.",
+      subtitle: "10-Minute Affirmation Music Intro",
+      description: "Experience Ria's work before anything else. A short audio experience to shift your mood instantly.",
       price: "Complimentary",
       cta: "Experience the Journey",
       href: "/free-gift",
       items: [
-        "10-minute sleep-ready track",
-        "Introduction to Theta states",
+        "10-minute affirmation music intro",
+        "Introduction to affirmation music",
         "Instant digital delivery",
         "No email marketing spam",
       ],
@@ -872,7 +902,7 @@ const ProductLadderSection = () => {
       level: "Core Experience",
       title: "Subconscious Audio Alchemy",
       subtitle: "The Party Mixtape",
-      description: "A groovy, 30-minute energizing mix designed to reprogram your subconscious while you move—perfect for work, commutes, or getting ready.",
+      description: "A groovy, 30-minute energizing mix designed to reprogram your subconscious while you move. Perfect for work, commutes, or getting ready.",
       price: "₹1,999",
       originalPrice: "₹4,999",
       cta: "YES! SECURE MY MIXTAPE",
@@ -920,7 +950,7 @@ const ProductLadderSection = () => {
             Start Where <span className="italic text-purple-600">You Are</span>
           </h2>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto font-light">
-            Every journey begins with a single step. Explore the level that feels right — there's no pressure, only progress.
+            Every journey begins with a single step. Explore the level that feels right - there's no pressure, only progress.
           </p>
         </div>
 
@@ -1006,24 +1036,24 @@ const ProductLadderSection = () => {
 const ExperienceStoriesSection = () => {
   const stories = [
     {
-      text: "I approached this skeptically — I'm not someone who believes in anything unproven. But the psychology behind it made sense. After 3 weeks of consistent listening, my anxiety baseline genuinely shifted. I feel calmer without trying.",
+      text: "I approached this skeptically - I'm not someone who believes in anything unproven. But the psychology behind it made sense. After 3 weeks of consistent listening, my anxiety baseline genuinely shifted. I feel calmer without trying.",
       name: "Priya K.",
       location: "Bangalore",
-      img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       tag: "21-day journey"
     },
     {
-      text: "I'm a psychology student, so when Ria explained the subconscious mechanism behind the music, I was genuinely impressed. The layering is real — you can feel the shift without consciously hearing it. This is genuinely different from everything else.",
+      text: "I'm a psychology student, so when Ria explained the subconscious mechanism behind the music, I was genuinely impressed. The layering is real - you can feel the shift without consciously hearing it. This is genuinely different from everything else.",
       name: "Shreya M.",
       location: "Delhi",
-      img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       tag: "Core Package"
     },
     {
-      text: "A month of listening and I've stopped waking up with that familiar sense of dread. I don't know exactly how to explain it — but something fundamental has changed. I'm more decisive, less reactive. Highly recommend starting with the free track.",
+      text: "A month of listening and I've stopped waking up with that familiar sense of dread. I don't know exactly how to explain it - but something fundamental has changed. I'm more decisive, less reactive. Highly recommend starting with the free track.",
       name: "Ananya R.",
       location: "Mumbai",
-      img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
       tag: "Free track → Core Package"
     },
   ];
@@ -1068,7 +1098,7 @@ const ExperienceStoriesSection = () => {
   );
 };
 
-// Social Bridge Section — drives visitors to Instagram/YouTube
+// Social Bridge Section - drives visitors to Instagram/YouTube
 const SocialBridgeSection = () => {
   const topics = [
     {
@@ -1108,10 +1138,10 @@ const SocialBridgeSection = () => {
           <span className="text-purple-600 uppercase tracking-[0.2em] text-xs font-bold mb-4 block">Keep Learning</span>
           <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 text-gray-900">
             Want to Go Deeper? <br />
-            <span className="italic text-purple-600">We Teach It All — Free.</span>
+            <span className="italic text-purple-600">We Teach It All - Free.</span>
           </h2>
           <p className="text-gray-400 font-light text-lg max-w-xl mx-auto">
-            Ria regularly shares psychology breakdowns, sound science explainers, and manifestation frameworks — follow along to build your foundation before you begin.
+            Ria regularly shares psychology breakdowns, sound science explainers, and manifestation frameworks - follow along to build your foundation before you begin.
           </p>
         </div>
 
@@ -1119,7 +1149,7 @@ const SocialBridgeSection = () => {
         <div className="mb-12 rounded-[2rem] overflow-hidden shadow-2xl shadow-purple-100/50 border border-purple-100 aspect-video w-full max-w-3xl mx-auto">
           <iframe
             src="https://www.youtube.com/embed/FIb4jmgb8go?rel=0&modestbranding=1"
-            title="Ria Gupta — Manifestation & Sound Healing"
+            title="Ria Gupta - Manifestation & Sound Healing"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="w-full h-full"
@@ -1166,10 +1196,10 @@ const FAQSection = () => (
       </h2>
       <div className="space-y-8">
         {[
-          { q: "Is there actual psychology behind this?", a: "Yes. Ria is a trained psychologist. Every element of the music — the layering, the affirmation placement, the sound design choices — is grounded in how the subconscious mind processes information during relaxed states. This is not generic wellness content." },
-          { q: "Will I consciously hear the affirmations?", a: "No — and that's intentional. The affirmations are layered beneath the music specifically to bypass your conscious defenses. Your logical mind would filter them out. Your subconscious, however, absorbs them during relaxed states." },
-          { q: "How long before I feel a difference?", a: "Most listeners report a subtle shift in mood and baseline anxiety within the first week. For deeper reprogramming — identity-level shifts — we recommend 21+ days of regular listening. This is a long-term investment in your subconscious baseline." },
-          { q: "What's the difference between music tiers?", a: "The free track is an experience — a taster to feel Ria's approach. The Core Package includes the full music library plus guided reprogramming sessions. Premium Coaching is a 1:1 engagement with Ria where everything is tailored to your specific patterns." },
+          { q: "Is there actual psychology behind this?", a: "Yes. Ria is a trained psychologist. Every element of the music - the layering, the affirmation placement, the sound design choices - is grounded in how the subconscious mind processes information during relaxed states. This is not generic wellness content." },
+          { q: "Will I consciously hear the affirmations?", a: "No - and that's intentional. The affirmations are layered beneath the music specifically to bypass your conscious defenses. Your logical mind would filter them out. Your subconscious, however, absorbs them during relaxed states." },
+          { q: "How long before I feel a difference?", a: "Most listeners report a subtle shift in mood and baseline anxiety within the first week. For deeper reprogramming - identity-level shifts - we recommend 21+ days of regular listening. This is a long-term investment in your subconscious baseline." },
+          { q: "What's the difference between music tiers?", a: "The free track is an experience - a taster to feel Ria's approach. The Core Package includes the Party Mixtape and a listening guide. Premium Coaching is a 1:1 engagement with Ria where everything is tailored to your specific patterns." },
           { q: "Can I book a consultation first?", a: "Absolutely. In fact, we encourage it. A discovery call with Ria lets you understand whether her approach is right for you before any commitment. Use the 'Book a Discovery Call' button to start that conversation." },
         ].map((faq, i) => (
           <div key={i} className="bg-white p-8 rounded-3xl border border-purple-100 shadow-sm">
@@ -1292,7 +1322,7 @@ const HomePage = () => {
       title: "Party Mixtape",
       subtitle: "High-Energy • Social Magnetism Booster",
       description:
-        "Turn any moment into a manifestation opportunity—dance, socialize, and attract.",
+        "Turn any moment into a manifestation opportunity-dance, socialize, and attract.",
       fullDetail: `The Party Tape is a 30-minute high-energy mix designed for active movement and high-vibe moments.
 
 On the surface, it’s modern, upbeat music you’ll love.
@@ -1316,22 +1346,22 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
 
   const testimonials = [
     {
-      text: "I used the Party Mixtape before a big night and felt magnetic — people kept approaching me. Best night out in years.",
+      text: "I used the Party Mixtape before a big night and felt magnetic - people kept approaching me. Best night out in years.",
       name: "Sanya P.",
       location: "New Delhi",
-      img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     },
     {
       text: "I was skeptical. Two days later, a client I hadn't heard from in months reached out and paid in full. No coincidence in my book.",
       name: "Leah M.",
       location: "Vancouver",
-      img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     },
     {
       text: "Within a week of listening, I got a job offer with better pay and 100% remote work. This is exactly what I envisioned.",
       name: "Melanie T.",
       location: "Toronto",
-      img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     },
   ];
 
@@ -1343,7 +1373,6 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
   return (
     <div className="min-h-screen bg-white text-gray-900 text-[92%] md:text-[90%] lg:text-[90%]">
       <SectionNavigator />
-      <AudioPreview />
       <PurchaseNotification />
       <ExitPopup
         isOpen={showExitPopup}
@@ -1395,7 +1424,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
                 className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-lg mx-auto lg:mx-0"
               >
                 The Party Mixtape is a 30-minute groovy, high-energy experience
-                engineered to reprogram your subconscious while you move—perfect
+                engineered to reprogram your subconscious while you move - perfect
                 for working, driving, or walking.
               </motion.p>
 
@@ -1456,7 +1485,22 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
         </div>
       </section>
 
-      {/* PROBLEM / POSITIONING — UPDATED WITH NEW RICH CONTENT */}
+      {/* PRESS LOGOS STRIP */}
+      <div className="border-y border-purple-50 bg-purple-50/30 py-8 relative z-10">
+        <div className="container-custom max-w-5xl mx-auto px-4">
+          <p className="text-center text-[10px] font-black tracking-[0.2em] text-gray-400 uppercase mb-6">As Seen In</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+            {/* Dailyhunt Logo */}
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Dailyhunt_logo.png" alt="Dailyhunt" className="h-6 md:h-8 object-contain" />
+            {/* The Tribune Logo */}
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/The_Tribune_Logo.png" alt="The Tribune" className="h-6 md:h-8 object-contain" />
+            {/* Google News Logo */}
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_News_icon.svg" alt="Google News" className="h-6 md:h-8 object-contain" />
+          </div>
+        </div>
+      </div>
+
+      {/* PROBLEM / POSITIONING - UPDATED WITH NEW RICH CONTENT */}
       <section className="py-14 md:py-24 px-4 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-100 to-transparent" />
         <div className="container-custom max-w-5xl mx-auto text-center relative z-10">
@@ -1473,19 +1517,19 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
           </motion.div>
 
           <h2 className="text-4xl md:text-7xl font-serif font-bold mb-10 text-gray-900 leading-[1.1] tracking-tight">
-            Where Psychology <br />
+            You Already Listen <br />
             <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-transparent italic">
-              Meets Sound Healing.
+              to Music.
             </span>
           </h2>
 
           <p className="text-xl md:text-3xl text-gray-500 mb-12 font-light leading-relaxed max-w-4xl mx-auto italic">
-            "Why does manifestation never seem to work?"
+            "Make It Work For You."
           </p>
 
           <p className="text-lg md:text-xl text-gray-500 mb-12 font-light leading-relaxed max-w-3xl mx-auto">
-            It's not because you're doing it wrong. It's because most methods work <em>against</em> how your mind actually functions.
-            Ria's approach works <span className="text-purple-600 font-bold not-italic">with your subconscious</span> — not over it.
+            You already listen to music daily while driving, showering, cooking, or doing chores.
+            Ria's approach works <span className="text-purple-600 font-bold not-italic">with your existing habits</span>, quietly upgrading your mindset without any extra effort.
           </p>
 
           <div className="flex justify-center"><div className="w-24 h-px bg-purple-100" /></div>
@@ -1507,13 +1551,13 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
       {/* EXPERIENCE STORIES */}
       <div id="stories"><ExperienceStoriesSection /></div>
 
-      {/* SOCIAL BRIDGE — Instagram & YouTube */}
+      {/* SOCIAL BRIDGE - Instagram & YouTube */}
       <SocialBridgeSection />
 
       {/* FAQ SECTION */}
       <FAQSection />
 
-      {/* ABOUT RIA — AUTHORITY SECTION */}
+      {/* ABOUT RIA - AUTHORITY SECTION */}
       <div id="about-ria"><AboutFounderSection /></div>
 
       {/* COMBINED FINAL CTA */}
@@ -1531,7 +1575,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
               Ready to Begin?
             </h2>
             <p className="text-lg md:text-xl text-gray-500 mb-12 max-w-xl mx-auto font-light leading-relaxed">
-              Start free. Go deep when you're ready. No rush — just real, sustained transformation guided by psychology.
+              Start free. Go deep when you're ready. No rush - just real, sustained transformation guided by psychology.
             </p>
 
             {/* 3 action paths */}
@@ -1558,7 +1602,7 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
               >
                 book a free discovery call
               </button>
-              {" "}— no pressure, just a conversation.
+              {" "}- no pressure, just a conversation.
             </p>
 
             <p className="text-gray-300 text-xs mt-8">Free discovery call • No obligation • Psychology-led conversation</p>
