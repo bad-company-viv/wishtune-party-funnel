@@ -4,7 +4,7 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "I prescribe sleep medication daily, but this is what I use personally. It’s the only thing that shuts off my 'doctor brain' after a 14-hour shift.",
+      "I prescribe sleep medication daily, but this is what I use personally. It’s the only thing that shuts off my 'doctor brain' after a 14 hour shift.",
     author: "Dr. Sarah Jenkins",
     role: "Emergency Medicine Physician",
     type: "Clinical",

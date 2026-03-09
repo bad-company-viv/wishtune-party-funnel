@@ -55,7 +55,7 @@ const DiscoveryCallModal = ({ onClose }) => {
                 <span className="text-purple-300 text-xs font-black uppercase tracking-widest block mb-2">Complimentary • No Obligation</span>
                 <h3 className="text-2xl font-serif font-bold">Book a Discovery Call</h3>
                 <p className="text-white/60 text-sm font-light mt-1">
-                  Leave your details — Ria's team will reach out within 24 hours.
+                  Leave your details Ria's team will reach out within 24 hours.
                 </p>
               </div>
               <button

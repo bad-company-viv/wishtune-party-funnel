@@ -139,7 +139,7 @@ const OTOPage = () => {
               <span className="block italic text-purple-600 mt-2">Unlock the Full Experience.</span>
             </h1>
             <p className="text-xl text-gray-500 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-              The complimentary track gives you a taste. The Core Experience gives you the full 30-minute high-energy mix — engineered for social magnetic presence and unshakable confidence.
+              The complimentary track gives you a taste. The Core Experience gives you the full 30 minute high energy mix engineered for social magnetic presence and unshakable confidence.
             </p>
           </motion.div>
 
@@ -159,7 +159,7 @@ const OTOPage = () => {
                 </li>
                 <li className="flex items-start gap-3 text-gray-400 text-sm">
                   <X size={16} className="text-red-300 shrink-0 mt-0.5" />
-                  <span>No 30-minute High-Energy Party Mix</span>
+                  <span>No 30 minute High Energy Party Mix</span>
                 </li>
                 <li className="flex items-start gap-3 text-gray-400 text-sm">
                   <X size={16} className="text-red-300 shrink-0 mt-0.5" />
@@ -167,7 +167,7 @@ const OTOPage = () => {
                 </li>
                 <li className="flex items-start gap-3 text-gray-400 text-sm">
                   <X size={16} className="text-red-300 shrink-0 mt-0.5" />
-                  <span>No personalized 21-day roadmap</span>
+                  <span>No personalized 21 day roadmap</span>
                 </li>
               </ul>
             </div>
@@ -184,16 +184,16 @@ const OTOPage = () => {
               </div>
 
               <p className="text-gray-500 mb-10 text-lg font-light leading-relaxed">
-                The Party Mixtape is a 30-minute high-energy mix designed for active movement and social confidence—perfect for pre-gaming or high-vibe nights.
+                The Party Mixtape is a 30 minute high energy mix designed for active movement and social confidence perfect for pre gaming or high vibe nights.
               </p>
 
               <ul className="space-y-4 mb-10">
                 {[
-                  "30-Minute High-Energy Audio",
+                  "30 Minute High Energy Audio",
                   "Gamma & High-Beta Energy Layers",
                   "Charisma & Confidence Affirmations",
                   "Lossless Bass-Forward Production",
-                  "21-Day Manifestation Roadmap"
+                  "21 Day Manifestation Roadmap"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
                     <Check size={18} className="text-purple-600 shrink-0" />
@@ -245,13 +245,13 @@ const OTOPage = () => {
             {[
               {
                 icon: <Brain className="text-purple-600" size={24} />,
-                title: "Psychology-Led Depth",
+                title: "Psychology Led Depth",
                 desc: "Every second is engineered by a trained psychologist to bypass conscious resistance and build magnetic confidence.",
               },
               {
                 icon: <Layers className="text-pink-600" size={24} />,
                 title: "Energy Layering",
-                desc: "Uses specific wave-layering designed to prime your brain for social engagement and high-vibe interactions.",
+                desc: "Uses specific wave layering designed to prime your brain for social engagement and high vibe interactions.",
               },
               {
                 icon: <Heart className="text-indigo-600" size={24} />,
@@ -280,7 +280,7 @@ const OTOPage = () => {
               <span className="text-purple-300 text-xs font-black uppercase tracking-widest block mb-3">Looking for deeper work?</span>
               <h3 className="text-2xl md:text-4xl font-serif font-bold mb-3">Premium 1:1 Coaching with Ria</h3>
               <p className="text-white/70 font-light leading-relaxed max-w-2xl">
-                A fully personalized coaching engagement — subconscious audit, custom music protocol, and ongoing mentorship. Leave your details and Ria's team will reach out within 24 hours.
+                A fully personalized coaching engagement subconscious audit, custom music protocol, and ongoing mentorship. Leave your details and Ria's team will reach out within 24 hours.
               </p>
             </div>
 

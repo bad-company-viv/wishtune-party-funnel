@@ -50,11 +50,32 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-gray-600 text-xs md:text-sm tracking-[0.2em] font-medium uppercase hover:text-gray-900 transition-colors">
-            2026 Wishtune – All Rights Reserved.
+            2026 Wishtune All Rights Reserved.
           </p>
 
-          <div className="flex gap-4 items-center flex-wrap justify-center">
+          <div className="flex gap-6 items-center flex-wrap justify-center">
             <a href="https://riagupta.com/blog" target="_blank" rel="noopener noreferrer" className="text-xs text-brand-gold font-bold hover:text-gray-900 transition-colors uppercase tracking-widest underline decoration-brand-gold/30 underline-offset-4">Ria's Blogs</a>
+
+            {/* Site Credits */}
+            <div className="flex items-center bg-white/70 backdrop-blur-sm border border-gray-200 rounded-full px-4 py-1.5 gap-3 shadow-sm hover:shadow-md transition-all duration-300">
+              <a
+                href="https://fabulousmedia.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity flex items-center"
+              >
+                <img src="/sitecredits/fabulous.png" alt="Fabulous Media" className="h-4 w-auto object-contain" />
+              </a>
+              <div className="w-[1px] h-3 bg-gray-300" />
+              <a
+                href="https://gocommercially.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity flex items-center"
+              >
+                <img src="/sitecredits/gocomercially.svg" alt="Go Commercially" className="h-4 w-auto object-contain" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

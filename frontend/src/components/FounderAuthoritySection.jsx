@@ -51,7 +51,7 @@ const FounderAuthoritySection = () => {
           <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
             <p>
               Most sleep apps are built by tech companies. Wishtune was created
-              by <strong>Ria Gupta</strong> — a licensed psychologist and
+              by <strong>Ria Gupta</strong> a licensed psychologist and
               professional DJ who spent years studying how sound affects the
               nervous system.
             </p>

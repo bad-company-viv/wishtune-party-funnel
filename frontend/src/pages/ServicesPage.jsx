@@ -116,7 +116,7 @@ const ServicesPage = () => {
           <TrustSignal
             icon={<Users size={32} />}
             title="Hundreds Changed"
-            desc="From entrepreneurs to everyday dreamers—helping people dissolve blocks."
+            desc="From entrepreneurs to everyday dreamers helping people dissolve blocks."
           />
           <TrustSignal
             icon={<Globe size={32} />}
@@ -183,11 +183,11 @@ const ServicesPage = () => {
           />
           <FAQItem
             question="How Long Should I Listen Each Day?"
-            answer="We recommend at least 15-20 minutes daily. Consistency is more important than duration. The tracks are designed to loop, so you can listen as long as you like."
+            answer="We recommend at least 15 20 minutes daily. Consistency is more important than duration. The tracks are designed to loop, so you can listen as long as you like."
           />
           <FAQItem
             question="Do I Need Headphones?"
-            answer="For the best results with our binaural beats tracks (Sleep, Focus), yes. For general mood-shifting tracks (Party, Shower), speakers work great too."
+            answer="For the best results with our binaural beats tracks (Sleep, Focus), yes. For general mood shifting tracks (Party, Shower), speakers work great too."
           />
         </div>
       </section>

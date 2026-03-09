@@ -33,9 +33,9 @@ const blogPosts = [
   },
   {
     id: "21-day-shift",
-    title: "The 21-Day Shift: Rewiring the Subconscious",
+    title: "The 21 Day Shift: Rewiring the Subconscious",
     excerpt:
-      "Why 21 days? It's not just a habit rule—it's the biological cycle for neural plasticity to solidify new patterns.",
+      "Why 21 days? It's not just a habit rule it's the biological cycle for neural plasticity to solidify new patterns.",
     category: "Guide",
     image: "/images/blogs/21day.png",
     readTime: "6 min read",

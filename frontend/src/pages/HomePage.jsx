@@ -160,32 +160,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* 1.5 MEDIA TRUST STRIP */}
-      <section className="py-12 bg-gradient-to-r from-brand-plum/20 via-black to-brand-plum/20 border-y border-white/5 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
-        <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500 mb-6">
-            {/* Simulated Logos with Text/Icons for high-end look without assets */}
-            <span className="text-xl font-serif font-bold flex items-center gap-1">
-              <span className="text-2xl text-white">⌘</span> dailyhunt
-            </span>
-            <span className="text-2xl font-serif font-black tracking-tighter">
-              The Tribune
-            </span>
-            <span className="text-lg font-sans font-bold flex items-center gap-1">
-              <span className="bg-white text-black px-1 rounded-sm text-xs py-0.5">
-                GE
-              </span>{" "}
-              Google News
-            </span>
-            <span className="text-2xl font-bold tracking-widest">ANI</span>
-            <span className="text-lg font-serif italic">Business Standard</span>
-          </div>
-          <p className="text-brand-gold/80 font-serif italic tracking-wide text-sm">
-            Patent pending. Delivered online.
-          </p>
-        </div>
-      </section>
+
 
       {/* 2. FOUNDER / ABOUT SECTION */}
       <FounderAuthoritySection />
@@ -318,7 +293,7 @@ const HomePage = () => {
 const TestimonialSlider = () => {
   const testimonials = [
     {
-      text: "I used the Party Mixtape before a night out and felt magnetic. People kept starting conversations with me — it changed the whole evening.",
+      text: "I used the Party Mixtape before a night out and felt magnetic. People kept starting conversations with me it changed the whole evening.",
       name: "Sanya P.",
       location: "New Delhi",
       img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
@@ -330,7 +305,7 @@ const TestimonialSlider = () => {
       img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
     },
     {
-      text: "I used the Party Mixtape before a big event and felt an instant glow — people noticed and approached me. Worth every penny.",
+      text: "I used the Party Mixtape before a big event and felt an instant glow people noticed and approached me. Worth every penny.",
       name: "Melanie T.",
       location: "Toronto",
       img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",

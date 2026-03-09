@@ -42,7 +42,7 @@ const ProductPreviewSection = () => {
                         Hear what <span className="italic text-white/50">calm</span> sounds like.
                     </h2>
                     <p className="text-white/60 max-w-lg mx-auto">
-                        No guided voices. No distracting melodies. Just pure, neuro-acoustic sound designed to lower your cortisol levels.
+                        No guided voices. No distracting melodies. Just pure, neuro acoustic sound designed to lower your cortisol levels.
                     </p>
                 </motion.div>
 

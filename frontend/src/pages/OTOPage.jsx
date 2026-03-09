@@ -91,7 +91,7 @@ const OTOPage = () => {
               <p className="text-white/70 mb-6 leading-relaxed">
                 Water amplifies manifestation. The{" "}
                 <strong>Shower Mixtape</strong> uses specific 528Hz frequencies
-                to clear production blocks and align your energy—all while you
+                to clear production blocks and align your energy all while you
                 scrub.
               </p>
 
@@ -138,7 +138,7 @@ const OTOPage = () => {
                   <Lock size={10} /> Secure SSL
                 </span>
                 <span className="flex items-center gap-1">
-                  <ShieldCheck size={10} /> 30-Day Guarantee
+                  <ShieldCheck size={10} /> 30 Day Guarantee
                 </span>
               </div>
             </div>
