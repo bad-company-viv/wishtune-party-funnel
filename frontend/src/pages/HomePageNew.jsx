@@ -1036,24 +1036,25 @@ const ProductLadderSection = () => {
 const ExperienceStoriesSection = () => {
   const stories = [
     {
-      text: "I approached this skeptically , I'm not someone who believes in anything unproven. But the psychology behind it made sense. After 3 weeks of consistent listening, my anxiety baseline genuinely shifted. I feel calmer without trying.",
-      name: "Priya K.",
+      text: "I approached this skeptically, I'm not someone who believes in anything unproven. But the psychology behind it made sense. After 3 weeks of consistent listening, my anxiety baseline genuinely shifted. I feel calmer without trying.",
+      name: "Priyansh",
       location: "Bangalore",
-      img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      img: "/images/testimonials/testimonial1.jpeg",
       tag: "21 day journey"
     },
     {
-      text: "I'm a psychology student, so when Ria explained the subconscious mechanism behind the music, I was genuinely impressed. The layering is real  you can feel the shift without consciously hearing it. This is genuinely different from everything else.",
+      text: "I'm a psychology student, so when Ria explained the subconscious mechanism behind the music, I was genuinely impressed. The layering is real - you can feel the shift without consciously hearing it. This is genuinely different from everything else.",
       name: "Shreya M.",
       location: "Delhi",
-      img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      img: "/images/testimonials/testimonial3.jpeg",
       tag: "Core Package"
     },
     {
-      text: "A month of listening and I've stopped waking up with that familiar sense of dread. I don't know exactly how to explain it but something fundamental has changed. I'm more decisive, less reactive. Highly recommend starting with the free track.",
-      name: "Rahul",
-      location: "Mumbai",
-      img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      text: "A month of listening and I've stopped waking up with that familiar sense of dread. I don't know exactly how to explain it but something fundamental has changed. I'm more decisive, less reactive. Highly recommend starting with the free track",
+      name: "Mahesh",
+      location: "Pune",
+
+      img: "/images/testimonials/testimonial2.jpeg",
       tag: "Free track → Core Package"
     },
   ];
@@ -1065,7 +1066,7 @@ const ExperienceStoriesSection = () => {
           <span className="text-purple-600 uppercase tracking-[0.2em] text-sm font-bold mb-4 block">Experience Stories</span>
           <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 text-gray-900">
             Their Journey, <span className="italic">in Their Words</span>
-          </h2>
+          </h2> 
           <p className="text-lg text-gray-400 font-light">Experience over claims. Impact over promises.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-10">
@@ -1084,7 +1085,14 @@ const ExperienceStoriesSection = () => {
               <div className="text-purple-200 text-6xl font-serif leading-none mb-4">"</div>
               <p className="text-gray-700 italic text-base leading-relaxed mb-8 font-light">{story.text}</p>
               <div className="flex items-center gap-5">
-                <img src={story.img} className="w-14 h-14 rounded-full border-2 border-purple-200 shadow-md" alt={story.name} />
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-400/40 to-pink-400/40 rounded-full blur-lg"></div>
+                  <img 
+                    src={story.img} 
+                    className="relative w-16 h-16 rounded-full border-4 border-white shadow-xl ring-2 ring-purple-200/50 object-cover" 
+                    alt={story.name} 
+                  />
+                </div>
                 <div>
                   <p className="font-bold text-gray-900 text-lg">{story.name}</p>
                   <p className="text-xs uppercase text-purple-600 font-bold tracking-widest">{story.location}</p>
@@ -1346,22 +1354,22 @@ Underneath, we've layered subtle affirmation engineering so your mood and magnet
 
   const testimonials = [
     {
-      text: "I used the Party Mixtape before a big night and felt magnetic - people kept approaching me. Best night out in years.",
-      name: "Sanya P.",
-      location: "New Delhi",
-      img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      text: "I approached this skeptically, I'm not someone who believes in anything unproven. But the psychology behind it made sense. After 3 weeks of consistent listening, my anxiety baseline genuinely shifted. I feel calmer without trying.",
+      name: "Priya S.",
+      location: "Mumbai",
+      img: "/images/testimonials/testimonial1.jpeg",
     },
     {
-      text: "I was skeptical. Two days later, a client I hadn't heard from in months reached out and paid in full. No coincidence in my book.",
-      name: "Leah M.",
-      location: "Vancouver",
-      img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      text: "I'm a psychology student, so when Ria explained the subconscious mechanism behind the music, I was genuinely impressed. The layering is real - you can feel the shift without consciously hearing it. This is genuinely different from everything else.",
+      name: "Arjun K.",
+      location: "Bangalore",
+      img: "/images/testimonials/testimonial2.png",
     },
     {
-      text: "Within a week of listening, I got a job offer with better pay and 100% remote work. This is exactly what I envisioned.",
-      name: "Melanie T.",
-      location: "Toronto",
-      img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      text: "A month of listening and I've stopped waking up with that familiar sense of dread. I don't know exactly how to explain it but something fundamental has changed. I'm more decisive, less reactive. Highly recommend starting with the free track.",
+      name: "Kavya M.",
+      location: "Delhi",
+      img: "/images/testimonials/testimonial3.png",
     },
   ];
 

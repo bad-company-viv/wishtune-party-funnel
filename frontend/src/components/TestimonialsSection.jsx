@@ -4,24 +4,27 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "I prescribe sleep medication daily, but this is what I use personally. It’s the only thing that shuts off my 'doctor brain' after a 14 hour shift.",
-    author: "Dr. Sarah Jenkins",
-    role: "Emergency Medicine Physician",
-    type: "Clinical",
+      "I approached this skeptically, I'm not someone who believes in anything unproven. But the psychology behind it made sense. After 3 weeks of consistent listening, my anxiety baseline genuinely shifted. I feel calmer without trying.",
+    author: "Priya S.",
+    role: "Marketing Manager",
+    type: "Social",
+    img: "/images/testimonials/testimonial1.jpeg",
   },
   {
     quote:
-      "My mind usually races with code and strategy until 3am. Wishtune is like a kill-switch for my overthinking. I'm out in 10 minutes.",
-    author: "Alex V.",
-    role: "Senior Software Architect",
-    type: "High Performer",
+      "I'm a psychology student, so when Ria explained the subconscious mechanism behind the music, I was genuinely impressed. The layering is real - you can feel the shift without consciously hearing it. This is genuinely different from everything else.",
+    author: "Arjun K.",
+    role: "Psychology Student", 
+    type: "Dating",
+    img: "/images/testimonials/testimonial2.png",
   },
   {
     quote:
-      "I was skeptical because I hate 'meditation music'. This isn't that. It feels like a deep tissue massage for your nervous system.",
-    author: "Marcus T.",
-    role: "Hedge Fund Manager",
-    type: "High Performer",
+      "A month of listening and I've stopped waking up with that familiar sense of dread. I don't know exactly how to explain it but something fundamental has changed. I'm more decisive, less reactive. Highly recommend starting with the free track.",
+    author: "Kavya M.",
+    role: "Consultant",
+    type: "Professional",
+    img: "/images/testimonials/testimonial3.png",
   },
 ];
 
@@ -31,8 +34,8 @@ const TestimonialsSection = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-serif text-gray-900 mb-6">
-            Trusted by <span className="text-brand-gold italic">restless</span>{" "}
-            achievers.
+            Real Results from <span className="text-brand-gold italic">Real</span>{" "}
+            People.
           </h2>
         </div>
 
@@ -47,9 +50,16 @@ const TestimonialsSection = () => {
                 "{t.quote}"
               </p>
               <div className="flex items-center gap-4">
-                <div
-                  className={`w-1 h-12 ${t.type === "Clinical" ? "bg-blue-500" : "bg-brand-gold"} rounded-full`}
-                />
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-brand-gold/40 to-purple-500/40 rounded-full blur-lg"></div>
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden ring-4 ring-white shadow-xl">
+                    <img
+                      src={t.img}
+                      alt={t.author}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
                 <div>
                   <h5 className="text-gray-900 font-bold">{t.author}</h5>
                   <p className="text-gray-500 text-sm">{t.role}</p>

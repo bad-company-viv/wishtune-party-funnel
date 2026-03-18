@@ -293,40 +293,22 @@ const HomePage = () => {
 const TestimonialSlider = () => {
   const testimonials = [
     {
-      text: "I used the Party Mixtape before a night out and felt magnetic. People kept starting conversations with me it changed the whole evening.",
-      name: "Sanya P.",
-      location: "New Delhi",
-      img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-    },
-    {
-      text: "I was skeptical, but the Party mix gave me the confidence boost I needed. I networked all night and landed a new freelance client.",
-      name: "Leah M.",
-      location: "Vancouver",
-      img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-    },
-    {
-      text: "I used the Party Mixtape before a big event and felt an instant glow people noticed and approached me. Worth every penny.",
-      name: "Melanie T.",
-      location: "Toronto",
-      img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-    },
-    {
-      text: "I used the 'Beauty Tape' for JUST three days. People kept asking me what was different. One guy literally said, 'You have a glow today.' It gave me chills.",
-      name: "Ishita G.",
+      text: "I approached this skeptically, I'm not someone who believes in anything unproven. But the psychology behind it made sense. After 3 weeks of consistent listening, my anxiety baseline genuinely shifted. I feel calmer without trying.",
+      name: "Priya S.",
       location: "Mumbai",
-      img: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      img: "/images/testimonials/testimonial1.jpeg",
     },
     {
-      text: "Ria has understood me since day 1, she's deeply spiritual and has some beautiful outtakes on life. Sessions with her feel like you're with a friend who understands.",
-      name: "Nikita Kapoor",
-      location: "New Delhi",
-      img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
-    },
-    {
-      text: "My anxiety levels have dropped significantly since I started the Shower Mixtape. It's become my favorite part of the morning.",
+      text: "I'm a psychology student, so when Ria explained the subconscious mechanism behind the music, I was genuinely impressed. The layering is real - you can feel the shift without consciously hearing it. This is genuinely different from everything else.",
       name: "Arjun K.",
       location: "Bangalore",
-      img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80",
+      img: "/images/testimonials/testimonial2.png",
+    },
+    {
+      text: "A month of listening and I've stopped waking up with that familiar sense of dread. I don't know exactly how to explain it but something fundamental has changed. I'm more decisive, less reactive. Highly recommend starting with the free track.",
+      name: "Kavya M.",
+      location: "Delhi",
+      img: "/images/testimonials/testimonial3.png",
     },
   ];
 
@@ -372,11 +354,14 @@ const TestimonialSlider = () => {
               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-white transform rotate-45 border-b border-r border-gray-100"></div>
             </div>
             <div className="flex flex-col items-center">
-              <img
-                src={testimony.img}
-                alt={testimony.name}
-                className="w-16 h-16 rounded-full object-cover border-2 border-brand-plum mb-3"
-              />
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-plum/30 to-brand-gold/30 rounded-full blur-md"></div>
+                <img
+                  src={testimony.img}
+                  alt={testimony.name}
+                  className="relative w-20 h-20 rounded-full object-cover border-4 border-white shadow-xl mb-3 ring-2 ring-brand-plum/20"
+                />
+              </div>
               <h4 className="font-bold text-lg text-brand-dark">
                 {testimony.name}
               </h4>
@@ -403,11 +388,14 @@ const TestimonialSlider = () => {
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-white transform rotate-45 border-b border-r border-gray-100"></div>
           </div>
           <div className="flex flex-col items-center">
-            <img
-              src={testimonials[currentIndex].img}
-              alt={testimonials[currentIndex].name}
-              className="w-16 h-16 rounded-full object-cover border-2 border-brand-plum mb-3"
-            />
+            <div className="relative mb-3">
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-plum/30 to-brand-gold/30 rounded-full blur-md"></div>
+              <img
+                src={testimonials[currentIndex].img}
+                alt={testimonials[currentIndex].name}
+                className="relative w-20 h-20 rounded-full object-cover border-4 border-white shadow-xl ring-2 ring-brand-plum/20"
+              />
+            </div>
             <h4 className="font-bold text-lg text-brand-dark">
               {testimonials[currentIndex].name}
             </h4>

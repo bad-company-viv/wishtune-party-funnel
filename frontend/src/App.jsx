@@ -43,12 +43,7 @@ function App() {
         <Route element={<BrandLayout />}>
           {/* Main Brand/Sales Routes */}
           <Route path="/" element={<HomePage />} />
-          <Route path="/product/:id" element={<ProductDetailPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/refund-policy" element={<RefundPolicy />} />
-          <Route path="/terms-conditions" element={<TermsConditions />} />
+         
         </Route>
 
         {/* High-Converting Funnel Pages (Minimal distractions) */}
