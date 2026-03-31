@@ -906,7 +906,7 @@ const ProductLadderSection = () => {
       price: "₹1,999",
       originalPrice: "₹4,999",
       cta: "YES! SECURE MY MIXTAPE",
-      href: "https://riagupta.com/product/party-mixtape/",
+      href: "https://app.wishtune.com/shop/party",
       items: [
         "30 Minute High Energy Audio Reprogramming",
         "Listen while working, driving, or walking",
@@ -1066,7 +1066,7 @@ const ExperienceStoriesSection = () => {
           <span className="text-purple-600 uppercase tracking-[0.2em] text-sm font-bold mb-4 block">Experience Stories</span>
           <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 text-gray-900">
             Their Journey, <span className="italic">in Their Words</span>
-          </h2> 
+          </h2>
           <p className="text-lg text-gray-400 font-light">Experience over claims. Impact over promises.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-10">
@@ -1087,10 +1087,10 @@ const ExperienceStoriesSection = () => {
               <div className="flex items-center gap-5">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-400/40 to-pink-400/40 rounded-full blur-lg"></div>
-                  <img 
-                    src={story.img} 
-                    className="relative w-16 h-16 rounded-full border-4 border-white shadow-xl ring-2 ring-purple-200/50 object-cover" 
-                    alt={story.name} 
+                  <img
+                    src={story.img}
+                    className="relative w-16 h-16 rounded-full border-4 border-white shadow-xl ring-2 ring-purple-200/50 object-cover"
+                    alt={story.name}
                   />
                 </div>
                 <div>
