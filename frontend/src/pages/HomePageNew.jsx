@@ -906,7 +906,7 @@ const ProductLadderSection = () => {
       price: "₹1,999",
       originalPrice: "₹4,999",
       cta: "YES! SECURE MY MIXTAPE",
-      href: "https://app.wishtune.com/shop/party",
+      href: "https://wishtune.com/shop/party",
       items: [
         "30 Minute High Energy Audio Reprogramming",
         "Listen while working, driving, or walking",

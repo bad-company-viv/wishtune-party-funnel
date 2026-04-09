@@ -108,7 +108,7 @@ const OTOPage = () => {
   const navigate = useNavigate();
 
   const handleAcceptOffer = () => {
-    window.open("https://riagupta.com/product/party-mixtape/", "_blank");
+    window.open("https://wishtune.com/shop/party", "_blank");
   };
 
   return (
